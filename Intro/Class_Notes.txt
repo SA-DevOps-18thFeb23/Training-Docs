@@ -424,9 +424,18 @@ DAY-2
 	Remote Repository :
 	
 		www.github.com ===>
-	Create github account 
+		Create github account 
 			sign-up 
 	
 	Installation of tools 
-		
 	
+	Application Development ::::
+	
+		Tools ::::
+		
+		Development Tools :::
+					
+			IDEs 	--> Eclipse IDE for Enterprise Java and Web Developers
+							https://www.eclipse.org/downloads/packages/release/2021-03/r/eclipse-ide-enterprise-java-and-web-developers
+					--> Eclipse IDE for Java Developers
+					--> Visual Studio Code 			
