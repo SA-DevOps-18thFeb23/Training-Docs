@@ -1,0 +1,432 @@
+DevOps :::
+18th Feb.
+
+	Timing: 18th & 19th 	:: 2pm to 5pm - 3hrs
+			25th onwards 	:: 10AM to 1PM - 3hrs 
+			Only Weekends.
+			
+	Assignments :: 1 or Assignments every week.
+	practicals 
+	
+	DevOps ::: DevOps Tools 
+	Appln. development fundamentals :::
+		Java	- Fundamentals of Java 
+		Python
+		SQL 
+		Selenium 
+		
+	DevOps -- git, jenkins, docker, kubernetes, ansible, terraform....
+			open source tools
+	Managed Services ---
+	AWS 
+	Az
+	GCP 
+	
+	Lab ::: 
+	
+	AWS Cloud Platform -- VMs 
+	
+	DevOps :::
+	
+		Application Development proces :::
+	
+	Application ::: 
+		Software ::::
+		
+	SDLC ::: Software Development LifeCycle ::::
+	
+	Applications :
+		Desktop Appln.
+		Web Appln.
+		Mobile Appln.
+
+	SDLC :::
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+		
+	develop an appln.
+	
+	Application :::
+	
+	Monolith Application Architecture 
+	
+	Online shopping Cart:
+	
+	SDLC Strategy : 
+	
+	Waterfall model : Linear Approach.
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Agile Methodologies :
+	
+	Project / Application is composed of various Modules or Iterations
+
+	Online shopping Cart:	(sign-in,payment modules.....)
+	
+	sign-in Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Payment Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!		
+	
+	cardless payment:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+		
+	
+	Production Deployment 
+	
+	Telecom Domain :::
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::
+	
+	
+	DevOps ::: SDLC Strategies :::
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up				Developers --> write  code, use DB, config, testing, integrate -- deployed to prod.	
+	Sign-In
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 
+	
+	Agile Methodologies : Module / Iteration
+		
+		Developers --> write  code, use DB, config, testing, integrate 
+		But, cannot be deployed to prod independently.
+	Here the prod deployment happens at the Application Level.
+	
+	
+	DevOps ::: SDLC Strategies ::: 
+	
+		Microservice!!!
+		
+		Microservice based Architecture 
+	
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up		- microservice1 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	Sign-In		- microservice2 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 	
+	newservice  - microservice-n - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	
+		Monolith Architecture		 (vs)			Microservice based Architecture
+	
+
+	SDLC ::: 
+	
+	Who are all involved in this whole software development process :
+	
+		-	Business Analyst
+		-	Appln. Architect
+		-	Dev Team
+		-	Project Manager
+		- 	Team Lead
+		-	Test Engg.
+		-	Release Engg.
+		-	Prod Team for Deployments
+		-	Delivery Manager
+		-	DB Admins
+		-	Monitoring 
+		- 	Infra-Structure Team
+		-	QA Team
+
+
+	Traditional SDLC Process:: AGILE 
+	
+		-	Business Analyst,Delivery Manager,Appln. Architect 	===> 
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::		
+		
+		
+		Matured SDLC Strategies that can eliminate all these issues 
+		
+	DevOps :: SDLC Strategies --- 
+		
+	DevOps Stages :
+
+		Devteam --- Develop application
+		
+		Continuous Development : Tools like IDEs integrated with DevOps Tools.
+			Understanding the design doc. 	--> Code --> Build Code --> Create Artifacts --> Unit test
+											--> Publish/promote the appln to Testing Team for further Testing
+											--> Work on bug fixing
+			
+			Code ==> Developed IDEs (Integrated Development Environment) - Visual Studio Code, Eclipse based IDEs
+			Application Build : Compile the source code --- Create the executables(binaries)/Artifacts 
+			Unit Testing 
+		
+		Continuous Integration : Ensures high frequency of code integration for further testing.
+		
+		Continuous Testing : DevOps introduces Automated Testing Tool to achieve Continuous Testing.
+		
+		Continuous Delivery / Deployment ::: Is strategy that helps to speed-up production releases.
+		
+		Continuous Delivery (vs) Deployment 
+		
+		Environments :::
+		
+		Non-Prod Environment										Prod Environment 
+		
+		DEV 
+		Build
+		Test
+			QA 
+			UAT 											===>	Prod 
+		
+		Continuous Delivery 	===> Requires Manual Approvals from various stakeholders
+											Security Audits
+		
+		Continuous Deployment 	===> This doesn't expects any Manual intervension -- It is completly automated.
+										i.e., without manual approval we can do the production releases.
+		
+
+		www.amazon.com 
+		netflix
+		facebook
+		google 
+		
+		Critical Applications : INS,FIN
+			online banking / credit 			
+		Create a deployment window 
+			
+		AGILE Methodologies 
+				---> we can Achieve Continuous Development,Integration,Delivery. But NOT Continuous Deployment
+		DevOps Strategies 
+				---> we can Achieve Continuous Development,Integration,Delivery,Deployment,Monitoring, etc.....
+	
+		
+		Continuous Monitoring :: App. Infra, Security, vul, malware....
+		
+		www.amazon.com 
+	
+	DevOps is a Software Development strategy which promotes collaboration between Development and Operations Teams to achieve Continuous Integration & Continuous Delivery/Deployment in more automated fashion.
+
+	It consists of various stages like, Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring.
+
+	What is your Role ?
+	
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.	
+			
+	DevOps Engg. DevOps Architects, DevOps Consultants 
+	
+		DevOps is all about the People, process/strategies, Tools.
+		
+		
+	Tools :::
+	
+	DevOps Tools ::
+	
+		Managed Services/Tools  
+			- by the cloud service providers 
+			- AWS, AZURE, GCP 
+			
+		Self-Managed Services/Tools 
+			- Open-Source Tools 
+					CDevelopment , CI, C-Delivery/Deployment, Continuous Monitoring, Infra-Structure Provisioning
+					Configuration Management 
+					
+					GIT
+					Jenkins
+					Docker
+					Kubernetes
+					Ansible
+					Terraform
+					Prometheus/Grafana
+
+	
+########
+DAY-2
+########					
+	
+		Fundamentals of Application Programming!!!!
+			What is programming?
+			Java Programming
+			Python Programming
+		
+		Software Program ???
+		
+		-	set of instruction ?
+		-	task ?
+		- 	set of inputs & outputs
+		- 	type of written lang.
+	
+		Programming Lang. is secondary!!!!
+		
+			ADA, BASIC, COBOL, .Net,c,c++ Java, python, nodejs, angular,........
+	
+		Task??		
+		How to build the task??
+	
+		Software :::
+		
+			Application Software 
+				E-Commerce 
+				Banking
+				Insurance
+				Retail
+				Healthcare 
+				
+				Desktop Application
+				Web Application 			Java, Python 
+				Mobile Application 
+			
+			System Software 
+				Operating System 
+				3rd party tools & services 
+				
+		Programming Languages ::
+	
+		C Programming 
+		
+		Develop Web Application ::
+		
+		Java Programming Language!:::
+		
+		How to start your programming ?
+		
+			1. Requirement Analysis	
+			2. Design Document
+			
+			Code
+			Test
+			Deploy
+		
+		Freelance Web Developer!
+		
+	Static Web Page - Collecting Customers feedform
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+			
+	Write a Program!
+	
+	1. Write an algorithm to get the sum of two numbers.
+	
+	
+		5 + 5 = ?
+		
+		123123.1312312 + 12.4 = ?
+		
+		9999999999999 + 11111111111111 = ?
+		
+		1.5 + 1.5 = ?
+
+
+	DevOps Automation :::
+	
+		shell scripts 	--> Linux 
+		python scripts 	--> 
+		groovy scripts	--> 
+		yaml scripts 	--> 
+
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+
+
+	DevOps Engg. ::: --> Create a automation script to build(compile & create artifacts) a java application.
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+		3. Coding -- 
+		4. Tested 
+		5. Deployed	
+		
+	
+	Developers are writting some src codes --> 
+		where the source code will be save ?
+		
+		Source Code Management Tool :
+		Remote Repository to maintaining the source code!
+	
+	Remote Repository :
+	
+		www.github.com ===>
+	Create github account 
+			sign-up 
+	
+	Installation of tools 
+		
+	
