@@ -703,4 +703,84 @@ Re
 		1. Create AWS Account - Free Tier ==> 12 Months.
 		2. www.github.com
 							
-							
+
+
+
+#########
+DAY-5
+#########
+
+			AWS Region settings!
+			Account Settings!
+			
+			Billing Dashboard :
+			
+			AWS EC2 Instance -> 750 Hrs. per month.
+			
+			
+			1VMs  - 750.hrs / month
+			
+			10VMs --> 75hrs 
+		
+			AWS Services!
+			
+			
+			EC2 - Instances!!!!  ==> AWS - Virtual Machine 
+			Linux Machine!
+			
+			
+			IAC !
+			
+			- Launch EC2 Instance
+			
+				- Create key pair!
+				
+					*.pem
+					*.ppk
+					
+			SSH Client :::
+				****MobaXterm	--> *.pem
+					Putty		--> *.ppk
+			
+			
+			
+			Access AWS Instance ::
+			
+				Using EC2 Instance Connect
+				Using SSH Client
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+				Using Command Prompt
+				
+			Access the EC2 Instance
+				Using EC2 Instance Connect
+			
+			Public IP, Private 	
+			
+				Using SSH Client  use ssh connection using port 22
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+						
+		
+		
+		Organization :::
+			Created a Enterprise-Level AWS Account
+			
+		Email-id & password ===> Root Level 
+		
+		UserIDs 		developer1,.........,100
+		Roles			
+		
+		RBAC --> Role Based Access Control 
+		
+		User-Group ==> DEV_GROUP(developer1,.........,100)
+		
+		Public IP, Elastic IP/Static 
+		Private IP.
+		
+		
+		Kubernetes --> Open source 
+		
+		AWS --> EKS 
+		AZ  --> AKS
+		GCP --> GKS
