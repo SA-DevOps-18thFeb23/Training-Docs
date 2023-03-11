@@ -1,0 +1,994 @@
+DevOps :::
+18th Feb.
+
+	Timing: 18th & 19th 	:: 2pm to 5pm - 3hrs
+			25th onwards 	:: 10AM to 1PM - 3hrs 
+			Only Weekends.
+			
+	Assignments :: 1 or Assignments every week.
+	practicals 
+	
+	DevOps ::: DevOps Tools 
+	Appln. development fundamentals :::
+		Java	- Fundamentals of Java 
+		Python
+		SQL 
+		Selenium 
+		
+	DevOps -- git, jenkins, docker, kubernetes, ansible, terraform....
+			open source tools
+	Managed Services ---
+	AWS 
+	Az
+	GCP 
+	
+	Lab ::: 
+	
+	AWS Cloud Platform -- VMs 
+	
+	DevOps :::
+	
+		Application Development proces :::
+	
+	Application ::: 
+		Software ::::
+		
+	SDLC ::: Software Development LifeCycle ::::
+	
+	Applications :
+		Desktop Appln.
+		Web Appln.
+		Mobile Appln.
+
+	SDLC :::
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+		
+	develop an appln.
+	
+	Application :::
+	
+	Monolith Application Architecture 
+	
+	Online shopping Cart:
+	
+	SDLC Strategy : 
+	
+	Waterfall model : Linear Approach.
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Agile Methodologies :
+	
+	Project / Application is composed of various Modules or Iterations
+
+	Online shopping Cart:	(sign-in,payment modules.....)
+	
+	sign-in Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Payment Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!		
+	
+	cardless payment:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+		
+	
+	Production Deployment 
+	
+	Telecom Domain :::
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::
+	
+	
+	DevOps ::: SDLC Strategies :::
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up				Developers --> write  code, use DB, config, testing, integrate -- deployed to prod.	
+	Sign-In
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 
+	
+	Agile Methodologies : Module / Iteration
+		
+		Developers --> write  code, use DB, config, testing, integrate 
+		But, cannot be deployed to prod independently.
+	Here the prod deployment happens at the Application Level.
+	
+	
+	DevOps ::: SDLC Strategies ::: 
+	
+		Microservice!!!
+		
+		Microservice based Architecture 
+	
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up		- microservice1 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	Sign-In		- microservice2 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 	
+	newservice  - microservice-n - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	
+		Monolith Architecture		 (vs)			Microservice based Architecture
+	
+
+	SDLC ::: 
+	
+	Who are all involved in this whole software development process :
+	
+		-	Business Analyst
+		-	Appln. Architect
+		-	Dev Team
+		-	Project Manager
+		- 	Team Lead
+		-	Test Engg.
+		-	Release Engg.
+		-	Prod Team for Deployments
+		-	Delivery Manager
+		-	DB Admins
+		-	Monitoring 
+		- 	Infra-Structure Team
+		-	QA Team
+
+
+	Traditional SDLC Process:: AGILE 
+	
+		-	Business Analyst,Delivery Manager,Appln. Architect 	===> 
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::	
+		
+		Matured SDLC Strategies that can eliminate all these issues 
+		
+	DevOps :: SDLC Strategies --- 
+		
+	DevOps Stages :
+
+		Devteam --- Develop application
+		
+		Continuous Development : Tools like IDEs integrated with DevOps Tools.
+			Understanding the design doc. 	--> Code --> Build Code --> Create Artifacts --> Unit test
+											--> Publish/promote the appln to Testing Team for further Testing
+											--> Work on bug fixing
+			
+			Code ==> Developed IDEs (Integrated Development Environment) - Visual Studio Code, Eclipse based IDEs
+			Application Build : Compile the source code --- Create the executables(binaries)/Artifacts 
+			Unit Testing 
+		
+		Continuous Integration : Ensures high frequency of code integration for further testing.
+		
+		Continuous Testing : DevOps introduces Automated Testing Tool to achieve Continuous Testing.
+		
+		Continuous Delivery / Deployment ::: Is strategy that helps to speed-up production releases.
+		
+		Continuous Delivery (vs) Deployment 
+		
+		Environments :::
+		
+		Non-Prod Environment										Prod Environment 
+		
+		DEV 
+		Build
+		Test
+			QA 
+			UAT 											===>	Prod 
+		
+		Continuous Delivery 	===> Requires Manual Approvals from various stakeholders
+											Security Audits
+		
+		Continuous Deployment 	===> This doesn't expects any Manual intervension -- It is completely automated.
+										i.e., without manual approval we can do the production releases.
+		
+
+		www.amazon.com 
+		netflix
+		facebook
+		google 
+		
+		Critical Applications : INS,FIN
+			online banking / credit 			
+		Create a deployment window 
+			
+		AGILE Methodologies 
+				---> we can Achieve Continuous Development,Integration,Delivery. But NOT Continuous Deployment
+		DevOps Strategies 
+				---> we can Achieve Continuous Development,Integration,Delivery,Deployment,Monitoring, etc.....
+	
+		
+		Continuous Monitoring :: App. Infra, Security, vul, malware....
+		
+		www.amazon.com 
+	
+	DevOps is a Software Development strategy which promotes collaboration between Development and Operations Teams to achieve Continuous Integration & Continuous Delivery/Deployment in more automated fashion.
+
+	It consists of various stages like, Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring.
+
+	What is your Role ?
+	
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.	
+			
+	DevOps Engg. DevOps Architects, DevOps Consultants 
+	
+		DevOps is all about the People, process/strategies, Tools.
+		
+		
+	Tools :::
+	
+	DevOps Tools ::
+	
+		Managed Services/Tools  
+			- by the cloud service providers 
+			- AWS, AZURE, GCP 
+			
+		Self-Managed Services/Tools 
+			- Open-Source Tools 
+					CDevelopment , CI, C-Delivery/Deployment, Continuous Monitoring, Infra-Structure Provisioning
+					Configuration Management 
+					
+					GIT
+					Jenkins
+					Docker
+					Kubernetes
+					Ansible
+					Terraform
+					Prometheus/Grafana
+
+	
+########
+DAY-2
+########					
+	
+		Fundamentals of Application Programming!!!!
+			What is programming?
+			Java Programming
+			Python Programming
+		
+		Software Program ???
+		
+		-	set of instruction ?
+		-	task ?
+		- 	set of inputs & outputs
+		- 	type of written lang.
+	
+		Programming Lang. is secondary!!!!
+		
+			ADA, BASIC, COBOL, .Net,c,c++ Java, python, nodejs, angular,........
+	
+		Task??		
+		How to build the task??
+	
+		Software :::
+		
+			Application Software 
+				E-Commerce 
+				Banking
+				Insurance
+				Retail
+				Healthcare 
+				
+				Desktop Application
+				Web Application 			Java, Python 
+				Mobile Application 
+			
+			System Software 
+				Operating System 
+				3rd party tools & services 
+				
+		Programming Languages ::
+	
+		C Programming 
+		
+		Develop Web Application ::
+		
+		Java Programming Language!:::
+		
+		How to start your programming ?
+		
+			1. Requirement Analysis	
+			2. Design Document
+			
+			Code
+			Test
+			Deploy
+		
+		Freelance Web Developer!
+		
+	Static Web Page - Collecting Customers feedform
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+			
+	Write a Program!
+	
+	1. Write an algorithm to get the sum of two numbers.
+	
+	
+		5 + 5 = ?
+		
+		123123.1312312 + 12.4 = ?
+		
+		9999999999999 + 11111111111111 = ?
+		
+		1.5 + 1.5 = ?
+
+
+	DevOps Automation :::
+	
+		shell scripts 	--> Linux 
+		python scripts 	--> 
+		groovy scripts	--> 
+		yaml scripts 	--> 
+
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+
+
+	DevOps Engg. ::: --> Create a automation script to build(compile & create artifacts) a java application.
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+		3. Coding -- 
+		4. Tested 
+		5. Deployed	
+		
+	
+	Developers are writting some src codes --> 
+		where the source code will be save ?
+		
+		Source Code Management Tool :
+		Remote Repository to maintaining the source code!
+	
+	Remote Repository :
+	
+		www.github.com ===>
+		Create github account 
+			sign-up 
+	
+	Installation of tools 
+	
+	Application Development ::::
+	
+		Tools ::::
+		
+		Development Tools :::
+					
+			IDEs 	--> Eclipse IDE for Enterprise Java and Web Developers
+							https://www.eclipse.org/downloads/packages/release/2021-03/r/eclipse-ide-enterprise-java-and-web-developers
+					--> Eclipse IDE for Java Developers
+					--> Visual Studio Code 			
+					
+		
+	
+########
+DAY-3
+########
+
+
+		Developers!!!!
+		
+			New Service/product --- Source Code will be NEW. i.e., Application will be created from scratch.
+			
+			Change Requests(CR) --> Application src code is already present, make some incremental changes on it
+			Bug-fixing	--> Application src code is already present, make some incremental changes on it
+
+
+
+		Monolith Application Architecture :::
+		
+			Application1 - 
+			
+				Split the application into various Modules/Functions/Tasks: 1 Modules 
+				
+				Each task/modules can be developed/unit tested independently 
+				
+				But, the final deployment should be as a whole application.
+				
+				Monolith Applications are tightly coupled applications.
+				
+		
+		Microservice Application Architecture :::
+	
+			Application1 : On-line Registration Form
+			
+				Split the application into various Modules/Functions/Tasks/ 
+				
+				Each task is referred as service.
+				
+				Each service can be developed/unit tested independently and integrated to high envi. for further testing.
+				
+				Also, the services can be independently deployed to production.
+					
+		
+		Modules/Functions/Tasks/SERVICE ::::
+		
+		Single Tier Application
+		Two Tier Application
+		Three Tier Application
+		
+		User SIGN-UP Module1 ::
+		
+			Access the URL 
+			Choose SIGN-UP Option 
+			Display the SIGN-UP Form
+			Enter the required details
+			Validation 
+			
+		Name 	: 234234234234234
+		Phone 	: adfasdfsadf
+		EMail 	: 2342342423424sdfasdfasdfs
+		
+			Database:
+			
+			3-Tier Application Architecture
+			
+				Front-End/User Interface 	---> HTML/asp.net 
+				Business Logic 				---> Programming Language Java/Python/C#.Net
+				Database 					---> Oracle/Mysql
+			
+			2-Tier Application Architecture
+		
+			Front-End/User Interface 	---> HTML/asp.net 
+			Business Logic 				---> Programming Language Java/Python/C#.Net
+
+	
+			
+		Service ::: 
+		
+			Infra-Structure!
+				?
+			
+			
+			Application Development!
+			
+			
+			Application Release/Deployment!
+			
+		
+		
+		Module 5 AWS Fundamentals :::
+		
+		
+			Infra-Structure Team : ---> to Provision the Infra Structure!
+			
+				Computing Device  --> Install all the required tools 
+					jdk,...
+			
+			On-Premises:: 			Cloud Platform::
+		
+		Business Owner ::
+		
+		
+			E-Learning Portal.
+			
+			Web-Site!'
+			
+				Infra-Structure :
+					Develop my application
+					Test
+					Release 
+				
+				Computing Devices! 
+					Operating System
+					Softwares 
+					Networking 
+					Storage
+					User Access Control 
+					Security Management 
+				
+			On-Premises Environment :::
+		
+				Own Data Center / Servers :
+					Computing Devices! 
+						Operating System
+						Softwares 
+						Networking 
+						Storage
+						User Access Control 
+						Security Management 
+						
+			
+			Cloud Computing
+						
+				Own pulic/private cloud :
+					Computing Devices! 
+						Operating System
+						Softwares 
+						Networking 
+						Storage
+						User Access Control 
+						Security Management 
+		
+	
+
+			SAAS ::: 
+	
+	
+	Summary :::
+		• Understanding of Physical and Virtual Servers
+		• Overview of Public/Private Cloud Computing
+		IAAS
+		PAAS
+		SAAS
+		
+		Private cloud
+		Public
+		Hybrid
+		Community
+		
+		On-Premises & Cloud 
+		
+	Next ::
+
+		AWS --> 
+		
+		
+		
+		
+########
+DAY-4
+########
+
+		Cloud Computing - AWS 
+		
+			Feature of AWS, Azure, GCP
+			
+			Access AWS Cloud .
+				Create AWS Account 
+				Login 
+				Launch AWS Instances
+
+		DevOps Tool :::
+		
+
+
+	Java application : *.java  
+	
+		Build 	-- Compile & Create artifacts(binaries/executable)
+		Test 	-- Tested in Test environment. - Tomcat/Nginx(App. Server)
+		
+		QA-Server -- Launch server 
+		
+			Automate the server provisioning!
+
+			Scripts ---> IAC Tools 
+			
+			
+		Terraform 	--- IAC Tool 	---> Provision the servers. using server template/images
+		Ansible  	--- IAC Tool	---> Configure the Servers. 
+		
+		Eg.: 
+		
+			Build a java application. 
+			
+			Pre-requisites :
+			
+				Application
+				Build-Server	-- to automatically create the server we use Terraform
+				Build-Tools 	-- to automatically configure(Installation) the server with required tools, we use Ansible
+				
+			Infra-Structure --> 
+			Build Tools 	--> Maven[Compile & Create artifacts(binaries/executable)]
+				
+Re
+	Micro-service !
+
+
+
+		Virtual Machine ::::
+		
+		Every Cloud service providers have their own 
+			
+			Regions						
+				Availability Zones 		Data Centers 
+					VMs
+		
+		
+	DevOps Tools ::
+	
+		Managed Services/Tools  
+			- by the cloud service providers 
+			- AWS(codepipeline,codecommit,deploy,build) 
+			- AZURE(DevOps Services)
+			- GCP(DevOps Services) 
+			
+		Self-Managed Services/Tools 
+			- Open-Source Tools 
+					CDevelopment , CI, C-Delivery/Deployment, Continuous Monitoring, Infra-Structure Provisioning
+					Configuration Management 
+					
+					GIT
+					Jenkins
+					Docker
+					Kubernetes
+					Ansible
+					Terraform
+					Prometheus/Grafana
+	
+	
+	Enterprise-Level :::
+	
+		As a DevOps Engg. 	==> Should be strong in Open-Source DevOps Tools 
+							==> Aware of Managed Services from AWS/AZ/GCP 
+							
+		1. Create AWS Account - Free Tier ==> 12 Months. 
+		2. Explore the AWS User Interface and it services.
+		3. Create AWS Instance(VMs)
+		4. Login to AWS Instance 
+							
+	
+	Summary :::
+	
+		1. Create AWS Account - Free Tier ==> 12 Months.
+		2. www.github.com
+							
+
+
+#########
+DAY-5
+#########
+
+			AWS Region settings!
+			Account Settings!
+			
+			Billing Dashboard :
+			
+			AWS EC2 Instance -> 750 Hrs. per month.
+			
+			
+			1VMs  - 750.hrs / month
+			
+			10VMs --> 75hrs 
+		
+			AWS Services!
+			
+			
+			EC2 - Instances!!!!  ==> AWS - Virtual Machine 
+			Linux Machine!
+			
+			
+			IAC !
+			
+			- Launch EC2 Instance
+			
+				- Create key pair!
+				
+					*.pem
+					*.ppk
+					
+			SSH Client :::
+				****MobaXterm	--> *.pem
+					Putty		--> *.ppk
+			
+			
+			
+			Access AWS Instance ::
+			
+				Using EC2 Instance Connect
+				Using SSH Client
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+				Using Command Prompt
+				
+			Access the EC2 Instance
+				Using EC2 Instance Connect
+			
+			Public IP, Private 	
+			
+				Using SSH Client  use ssh connection using port 22
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+						
+		
+		
+		Organization :::
+			Created a Enterprise-Level AWS Account
+			
+		Email-id & password ===> Root Level 
+		
+		UserIDs 		developer1,.........,100
+		Roles			
+		
+		RBAC --> Role Based Access Control 
+		
+		User-Group ==> DEV_GROUP(developer1,.........,100)
+		
+		Public IP, Elastic IP/Static 
+		Private IP.
+		
+		
+		Kubernetes --> Open source 
+		
+		AWS --> EKS 
+		AZ  --> AKS
+		GCP --> GKS
+		
+#########
+DAY-6
+#########
+
+		EC2-Instances ::
+		
+			Security Groups:
+				Inbound Rules:
+					Use to control the incoming traffic to your instance
+				
+				Outbound Rules 
+					Use to control the outgoing traffic from your instance
+					
+		By Default :: Port 22 will be opened for SSH.
+		
+		If you want to add more inbound rules, goto to security tab, choose Security Group -- Edit Inbound rule
+		
+		
+		Amazon Linux 2 	-- user name : ec2-user
+		Ubuntu			-- user name : ubuntu
+		
+		Operating System :
+			Windows
+			
+			Linux***
+			
+			Mac 
+			
+		DevOps Role on Linux :
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+			Fundamentals of Linux
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> 
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				Start and Stop the Application Services
+			Backup and Recovery
+			Memory Management 
+			Handling Remote Servers.
+				using SSH
+					Host Address 
+					User Name 
+					Authentication Key/Password
+
+	NOTE : FYI
+		General Linux Admin Activities :
+		
+			Managing the Linux OS itself:
+				Linux OS Security patch updates
+				Patch updates 
+				Volume Management(Memory Management) 
+				Access Management 
+				Remote Access Controll
+				Backup and Recovery
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> 
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				Start and Stop the Application Services
+				Handling Remote Servers.				
+				
+	Linux OS
+	Architecture of Linux OS
+	Linux Commands
+	
+		Linux is Open-Source.
+		
+			Linux Distributions were introduced 
+			
+				Fedoro...
+					
+				Debian...
+		
+		Unix 
+
+			Any adhoc Command 		:: Shell Command			
+			Series of shell command :: Shell Script
+			
+			
+		Programming Languages :: C,C++,JAVA,Python,C# 
+			==> Used to build business Applications
+			==> Used to Create Application Software 
+			==> Few are used to Create System Software 
+		
+		Scripting Languages :: shell, python scripts, groovy, yaml scripts, java scripts  
+			==> Process Automation 
+			==> Create DevOps Automation - CI/CD
+		
+		Unix 	
+			Linux Distributions were introduced 			
+				Fedoro...
+					centos,rhel,amazon linux 2 
+				Debian...			
+					ubuntu 
+			
+			Application / Packages / Service Managements
+			
+				Package Managers : It is used to install/Unstall/Upgrade the packges in Linux envi.
+				
+					yum		--> Federo Distribution Family
+					apt-get --> Debian - Ubuntu 
+
+		Fundamentals of Linux Commands :::
+		
+		
+		Linux System Users :
+		
+			Login as ec2-user or ubuntu 
+			
+			Only root user has complete access to Linux by default 
+			
+			All the packages are managed only by root user 
+			
+			Linux  is case sensitive
+			
+			small case!
+			
+		Commands :
+		
+			clear --> Clear screen/terminal 
+			
+			yum is the package manager used in Fedora Distribution Family 
+			
+			git is a devops tool 
+			
+			yum install git
+
+			yum update 
+		
+			sudo yum update 
+			
+			install the packages??
+			
+		
+		
+    1  yum update
+    2  exit
+    3  clear
+    4  hostname -i
+    5  ifconfig
+    6  clear
+    7  hostname -i
+    8  exit
+    9  hostname -i
+   10  ifconfig
+   11  clear
+   12  yum update
+   13  yum install docker
+   14  docker --version
+   15  apt-get docker
+   16  clear
+   17  yum update docker
+   18  yum update
+   19  yum remove docker
+   20  docker --version
+   21  amazon-linux-extras
+   22  amazon-linux-extras
+   23  clear
+   24  amazon-linux-extras
+   25  amazon-linux-extras install epel
+   26  amazon-linux-extras install java-openjdk11 -y
+   27  amazon-linux-extras install ansible2 -y
+   28  ls
+   29  clear
+   30  pwd
+   31  ls
+   32  touch file1.txt
+   33  ls
+   34  touch file1.md
+   35  ls
+   36  cat file1.txt
+   37  echo "Hello Team"
+   38  echo "Hello Team" >> file1.txt
+   39  cat file1.txt
+   40  ls
+   41  echo "Hello Team" >> file2.txt
+   42  ls
+   43  cat file2.txt
+   44  echo "Hello Team" >> file2.txt
+   45  cat file2.txt
+   46  echo "Hello Team, how are you?" >> file2.txt
+   47  cat file2.txt
+   48  clear
+   49  cat file2.txt
+   50  echo "Hello Team, how are you?" >> file2.txt
+   51  cat file2.txt
+   52  echo "Hello Team, how are you?" > file2.txt
+   53  cat file2.txt
+   54  echo "record1" > file2.txt
+   55  cat file2.txt
+   56  ls
+   57  clear
+   58  pwd
+   59  mkdir folder1
+   60  ls
+   61  pwd
+   62  cd folder1/
+   63  pwd
+   64  echo "rec1" >> file1.doc
+   65  ls
+   66  cd ..
+   67  ls
+   68  pwd
+   69  history
+					
+					
+				
