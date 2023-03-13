@@ -819,7 +819,8 @@ DAY-6
 				
 			Fundamentals of Linux
 				User Mgmt.	--> ec2-user(default) root user , create some user.
-				File Mgmt.	--> 
+				File Mgmt.	--> dir & files ... creation,read,update,delete
+				
 				Appln. Mgmt. --> Installation, Un-installation, Upgradation
 				Start and Stop the Application Services
 			Backup and Recovery
@@ -992,3 +993,166 @@ DAY-6
 					
 					
 				
+########
+DAY-7
+########				
+
+		DevOps Role on Linux :
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+			Fundamentals of Linux
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> 
+					-	dir & files ... creation,read,update,delete
+					-	access the files		
+				
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				
+				Start and Stop the Application Services
+				
+			****Backup and Recovery & Memory Management 
+			
+			Handling Remote Servers.
+				using SSH
+					Host Address 
+					User Name 
+					Authentication Key/Password
+					
+			Shell Scripts!!!
+			
+			
+	Commands: 
+	
+		mkdir 
+		cd 
+		cd ..
+		
+		echo "rec1" >> file1.txt
+		
+		touch file2.txt
+		
+		vi file3.txt 
+			press 'i'  ==> insert records in the file 
+			press esc :wq ==> to write and quit the file 
+			press esc :q! ==> to quit from file without making any changes
+			
+		rm -f file1.txt file2.md 
+		rm -f file1.*
+		
+		rm -r sdir*
+		rm -rf sdir1
+		
+		cp file1.txt sdir1/
+		cp *.doc sdir1/
+		mv file2.txt sdir1/
+		mv f1.txt filez.doc
+
+			
+		
+
+	[root@ip-172-31-36-117 subdir1]# ll
+	total 0
+	-rw-r--r-- 1 root root 0 Mar 12 05:14 f1.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f2.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f3.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f43.txt
+		
+	-rw-r--r--		==> file 
+	d---------		==> directory 
+	
+	-				==> Component type i.e., file or dir
+	 ---			==> type/level of access at the user/owner level
+	    ---			==> type/level of access at the group level 
+		   ---		==> type/level of access at the user not part of the group 
+		   
+	-rwxrwxrwx 
+	
+	-rw-r--r-- 1 user1 dev 0 Mar 12 05:14 f1.txt
+	-rw------- 1 user2 dev 0 Mar 12 05:14 demo1.sh	
+
+	-rwxr-xr-- 1 user1 dev 0 Mar 12 05:14 demo1.sh	
+	
+	-rwxr-x--- 1 tuser1 test 0 Mar 12 05:14 testscript1.sh	
+	
+	dev group 
+		user1
+		user2
+	
+	test group 
+		tuser1
+		tuser2 
+
+	RBAC ---> 
+	
+	chmod 	==> Command is used to change the access mode 	
+	
+	chown	==> Command is used to change the ownership 	
+	
+	
+		Appln. Mgmt. --> Installation, Un-installation, Upgradation
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+		Install the pre-requisites
+		Install the actual package 
+		Config the Package 
+		
+		jenkins 				--> runs as a service -- and it run in default port 8080
+		
+			- jdk / jre 
+			- instal actual jenkins package 
+		git 				--> tool === can be accessed only on demand.
+		
+		jenkins 			--> runs as a service --  can be accessible till you shutdown ur server
+		
+		ansible ::
+
+
+		
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+		systemctl status jenkins
+		systemctl start jenkins
+		systemctl stop jenkins
+		systemctl enable jenkins
+		
+	
+	Services 	-- Run some tasks/application  -- Jenkins / Tomcat / Nginx / httpd.....
+	
+	Tools 		-- We can run any appln. 	git / VIM ... 
+	
+Summary :::
+
+	Fundamentals of Linux
+		User Mgmt.	--> ec2-user(default) root user , create some user.
+		File Mgmt.	--> 
+			-	dir & files ... creation,read,update,delete
+			-	access the files		
+		
+		Appln. Mgmt. --> Installation, Un-installation, Upgradation
+		
+		Start and Stop the Application Services
+
+	Assignment :::
+		For the weekdays : 13 - 17 
+			Will have Assignments on ::::
+					AWS Fundamentals :		1 & 2
+					Linux Fundamentals :	1
+					
+					
+	Algorithm ????
+
+		1. Write an algorithm to find sum of 'n' numbers 
+		2. Write an algorithm to find the maximum 'n' numbers
+		3. Write an algorithm to find the length of the string - "Linux is not boring"
+		4. Write an algorithm to check whether the given number is prime number or not.
+		5. Write an algorithm to find fibonacci series
+
+
+
