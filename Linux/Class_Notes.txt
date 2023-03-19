@@ -1450,4 +1450,226 @@ fi
 
 
 
+Application Programming Fundamentals ::::
+
+
+	Application Architecture :
+	
+		-	Monolith Architecture 
+					- Tightly coupled Applications 
+					- Dependencies are cannot be splitted into modules. 	
+					
+		-	Micro Service Based Application Architecture
+					- Are Designed by the Application Architects/Owners
+					- De-couple the appln.
+					- Independently developed, tested and deployed to production, without impacting other services	
+					
+	
+	Database ????
+	
+		Application Architecture ::
+		
+			1 - Tier 
+			2 - Tier 
+			3 - Tier 
+	
+	3 - Tier		
+		- 	User Interface 
+		-	Business Logic 
+		-	Database 
+	
+	2 - Tier
+		- 	User Interface 
+		-	Business Logic 
+	
+	1 - Tier 
+		-	Business Logic 		
+		
+		
+	Web Application ::
+		
+		Static Web Application 	- 	blog-sites, articles
+		Dynamic Web Application - 	Will have continuous interaction.
+		
+	Application ::
+
+		Java 
+		
+			varible	--> 				
+					int i = 0;
+					char c = "A";
+			Group of Varible ? Array of Variable -- identified by an index (starting with 0)
+					String cust_id[5] = {a,s,d,f,g}
+					String cust_name[5] = {cd,sd,fe,wd,ds}
+				
+				eg.: 
+					cust_id(2) = 'd' 
+					cust_id(0) = 'a'
+					cust_id(5) = ?  out of Index Exception/Error
+					
+					Dynamic Array :
+					String cust_id[n] = {1.....1000}
+					
+				cust_Database :: 1.....1000
+			
+			Conditional statements 
+				if, switch-case
+			Looping statements 
+				for,while,do-while loops
+			Handling Files 
+			Database 
+			
+			Appln -- Modules --> Functions..
+			
+				
+			int a = 5, b = 5, c = 0;			
+			c = a + b;			
+			print c
+
+			sum ()
+			{
+				int a = 5, b = 5, c = 0;			
+				c = a + b;			
+				return c		
+			}
+
+			sum (int a, int b, int c)
+			{			
+				c = a + b;			
+				return c		
+			}
+			
+			OOP Programming Concepts :::
+			
+			class 	-- collections func,varibles 
+			
+			object  -- instance of class 
+			
+			
+			class demo{
+				func1()
+				{
+				
+				}
+			}
+			
+			object s1;
+			
+			signin_class
+			{
+				func1()
+				func2()
+				func3()
+			}
+			
+			
+			sum ()
+			{
+				int a = 5, b = 5, c = 0;			
+				c = a + b;			
+				return c		
+			}
+			
+			sum (int a, int b, int c)
+			{			
+				c = a + b;			
+				return c		
+			}			
+			
+			sum (int a, int b, int x, int y, int c)
+			{			
+				c = a + b;			
+				return c		
+			}
+
+
+		Abstration
+		Encapsulation
+		Inheritance 
+
+			
+			User_Login Page ===> user_id & password 
+			
+			Display - Transaction page ===> User_Name
+			
+		Java --
+		 how to create a class 
+			package ==> class ==> func 
+		 compile & execute. 
+
+
+Summary :
+
+	Linux command, with SSH Access.
+	Shell Scripts 
+	Intro Appln. JAVA programming.
+
+Assignment ::
+	Linux level 2.
+	
+NEXT : 
+
+	Launch AWS Windows Machine.
+	
+		Install Java - jdk 
+		Eclipse 
+		Tomcat
+		git 
+
+	Create Java Console Application using Eclipse 
+	Create Java Web Application using Eclipse and run in Tomcat 
+	
+		Python  
+		Eclipse 
+		Flask webserver for python
+		git 
+
+	Create Pytho Console Application using Eclipse 
+	Create Python Web Application using Eclipse and run in Flask webserver
+		
+	
+
+
+
+
+
+
+
+	
+					
+					
+					
+
+OOPS Concepts :::::
+
+Object
+
+An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory. Objects can communicate without knowing the details of each other's data or code.
+
+
+Class
+Collection of objects is called class. It is a logical entity.
+
+A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.
+
+Inheritance
+When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+
+Polymorphism
+If one task is performed in different ways, it is known as polymorphism. 
+
+Abstraction
+Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
+
+Encapsulation
+Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
+
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
+Advantage of OOPs over Procedure-oriented programming language
+1) OOPs makes development and maintenance easier, whereas, in a procedure-oriented programming language, it is not easy to manage if code grows as project size increases.
+
+2) OOPs provides data hiding, whereas, in a procedure-oriented programming language, global data can be accessed from anywhere.
+
+
 
