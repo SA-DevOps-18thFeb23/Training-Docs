@@ -1156,3 +1156,289 @@ Summary :::
 
 
 
+########
+DAY-8
+########
+
+		Linux ::: 
+		
+			Create Linux User
+				Check the access mode and change access mode 
+			Access Remote Servers.
+				Create remote servers
+				Establish connection between the servers 
+					Using specific user
+					
+			Shell Scripts
+
+		
+		Launch Instance :
+		
+		Access Linux Servers :
+		
+			SSH Connection -- Secure SHell 
+			
+				Authentication methods we have in SSH ?
+				
+					- Password/Token based Authentication
+					- Key based Authentication
+						-	public key and private key (SSH Keys)						
+					- Passwordless Authentication
+					
+		Launch / Create any server :::
+		
+			Create the username.
+			Define the ssh key / password 	
+			Grant required access to the newly created user 
+			
+		Jenkins 
+		Ansible ? - CM ??
+		
+			DevOps_Admin : (Remote server) install GIT 
+			
+				DEV_Team 1,2,3,4,5,6,7
+				
+				create group ?  
+				
+DevOps Team :				
+	Jenkins_Master 		vm -- username  private_key
+		Jenkins_Slave	vm -- username  private_key
+			
+	
+DevOps Team:
+	Ansible_Controller	vm -- username	public_key  		ssh_keygen
+DevTeam:
+		Ansible_Node1(DevTeam) vm - username public_key 
+		Ansible_Node2(DevTeam) vm - username public_key 
+		Ansible_Node3(DevTeam) vm - username public_key 
+		Ansible_Node4(DevTeam) vm - username public_key 
+		Ansible_Node5(DevTeam) vm - username public_key 
+			
+
+########
+DAY-9
+########
+
+		Linux shell scripts :
+		
+		Application Development Fundamentals :
+			Java Programming 
+			Python 
+		
+		
+		useradd -m -d /home/devopsuser devopsuser
+		
+		ls -alrt
+
+		chown -R devopsadmin:devopsadmin /etc/ansible
+		
+		shell Scripts!!!!
+		
+			vi sample1.sh 
+			
+		chmod 755 script1.sh
+		
+		
+	Scripting Lang. (vs)
+	
+		handle_variables/Conditions/iterations/files/remote_Servers/
+		
+	variable can be static / dynamic 
+	
+	
+	4 --> even number ?
+	
+	4%2 = remainder = 0
+	
+#!/bin/bash
+# Define for loop in C-style format
+for (( n=1; n<=$1; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+
+#!/bin/bash
+# Define for loop in C-style format
+upper_limit=$1
+input_param2=$2
+echo @input_param2 
+
+for (( n=1; n<=$upper_limit; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+script1.sh var1 var2
+
+199 ==> even or odd ??
+
+Check whether the given number is even or odd ?
+
+#!/bin/bash
+n=$1
+# Check the number is even or not
+if (( $n%2==0 ))
+then
+	echo "$n is even"
+else
+	echo "$n is odd"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TO CHECK FOR PRIME NUMBER :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Iterate from 2 to n/2, i as looping variable.
+If the number is divisible, Then  - The number is not a prime number. 
+Assign a flag = 1;
+If the flag != 1, say  - The number is a prime prime number
+Stop
+
+
+primeornot.sh
+
+#!/bin/bash
+echo "Enter a number: "
+read num
+i=2
+f=0
+while [ $i -le `expr $num / 2` ]
+do
+if [ `expr $num % $i` -eq 0 ]
+then
+f=1
+fi
+i=`expr $i + 1`
+done
+if [ $f -eq 1 ]
+then
+echo "The number is composite"
+else
+echo "The number is Prime"
+fi
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~````
+
+
+#!/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+
+
+*********************************************************
+
+
+#!/bin/bash
+a="Team"
+echo "Hello $a"
+b="Hai"
+echo "Hello $b"
+echo "Hello $1 $2"
+sudo yum install vim -y
+
+
+./script1.sh val1 val2 
+
+
+*********************************************************
+
+# !/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+*********************************************************
+
+# !/bin/bash
+
+if [ $# -ne 1 ]
+then
+        echo "You need to enter the year."
+        exit 1
+fi
+
+year=$1
+
+if [ $[$year % 400] -eq "0" ]
+then
+        echo "$year is a leap year!"
+elif [ $[$year % 4] -eq 0 ]
+then
+        if [ $[$year % 100] -ne 0 ]
+        then
+                echo "$year is a leap year!"
+        else
+                echo "$year is not a leap year."
+        fi
+else
+        echo "$year is not a leap year."
+fi
+
+
+*********************************************************
+
+# !/bin/bash
+Balance=900
+if ((Balance < 0)); then
+  echo "Balance is less than zero, Please add more funds else you will be charged penalty"
+elif ((Balance == 0)); then
+  echo "Balance is zero, please add funds"
+else
+  echo "Your balance is above zero."
+fi
+
+
+*********************************************************
+
+#!/bin/bash
+read -p "Enter theory marks: " quiz_marks
+read -p "Enter practical marks: " assignments_marks
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+
+#######################################################################
+
+#!/bin/bash
+quiz_marks=80
+assignments_marks=70
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+
+
+
+
+
