@@ -142,7 +142,16 @@ DevOps :::
 		
 		Microservice based Architecture 
 	
+	Application Architecture :
 	
+		-	Monolith Architecture 
+					- Tightly coupled Applications 
+					- Dependencies are cannot be splitted into modules. 	
+					
+		-	Micro Service Based Application Architecture
+					- Are Designed by the Application Architects/Owners
+					- De-couple the appln.
+					- Independently developed, tested and deployed to production, without impacting other services		
 	www.amazon.com :::
 	
 	Easy to access!!!!
