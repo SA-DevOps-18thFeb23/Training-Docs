@@ -1760,3 +1760,88 @@ DAY-10
 			
 		Configured Tomcat in Eclipse !!!
 		
+		
+########
+DAY-11
+########	
+			Java Application Development using Maven
+			
+			
+			Java web appln. / console application ::::
+			
+			Micro service based architecture :::
+			
+				dependencies 
+				plugins 
+			
+			Maven Based Java Application.
+				pom.xml ==> define all the required dependencies & Plugins that are required to build/package the java aapplication.
+				
+				
+			Micro-services ==> java based....
+			
+				dev_server 		-- 	Created the code.
+									create pom.xml --> maven compiler v1.23, Junit 2.1.34
+									
+				Build_server 	-- 	Used to build the appln. artifacts. -- build tool like maven, (compiler) | Unit Testing - Junit Tool
+									Build Appln. Docker Image
+			
+			Java Maven Appln.
+			
+				pom.xml ==> define all the required dependencies & Plugins that are required to build/package the java aapplication.
+				
+				
+		mvn clean package !!!
+		
+		Types of build tools : ANT,Gradle,Maven
+		
+		Create a Maven Project.
+		
+		Created a Maven Console Application.
+		
+		JUnit Tools Integration in Maven Application. 
+		
+		What is Unit Testing ?
+		
+			sum(int a, int b) 
+			{
+				int c = a + b
+				return c
+			}
+			
+			JUnit Test Tools is used for.
+				It generates the Test Reports :-> Test Coverage => 100%, 75%, Test Result => How Many Test Scenarios ? | Passed ? | Failed ? | skipped?
+			
+			TestNG 
+			
+			Test Data :
+			Test Scenarios :
+			Test Cases :
+			
+				==> 23 + 45 == ? successful or fail 
+					100 + 100 == ?
+					1231.12312 + 1231.123 == ?					
+					123123123123123123 + 1231241241241241241412412412 = ?
+		
+		Summary :
+		
+		How to create simple java console application  & Web Application using Eclipse?
+		How to create simple java Maven application using Eclipse?
+		How to create simple java Maven application  using JUnit Testing?
+		Importance of Maven Project, pom.xml file
+		Maven Repositories
+		How to create POM.xml File?
+		Maven Goals :
+			● mvn clean - to clean the target folder.
+			● mvn compile - to compile the source code
+			● mvn test - to compile and execute junit test cases
+			● mvn package - to compile, test and package the application
+			● mvn install - to install the package to local repository.
+			● mvn deploy - to deploy the package from local repository to remote repository.
+
+		Level - 1 & 2 	--> Application Fundamental 
+		Level - 1 		--> Maven 
+		
+		Next :
+			Spring Boot Application Framework 			
+			Selenium with TestNG
