@@ -1,0 +1,2159 @@
+DevOps :::
+18th Feb.
+
+	Timing: 18th & 19th 	:: 2pm to 5pm - 3hrs
+			25th onwards 	:: 10AM to 1PM - 3hrs 
+			Only Weekends.
+			
+	Assignments :: 1 or Assignments every week.
+	practicals 
+	
+	DevOps ::: DevOps Tools 
+	Appln. development fundamentals :::
+		Java	- Fundamentals of Java 
+		Python
+		SQL 
+		Selenium 
+		
+	DevOps -- git, jenkins, docker, kubernetes, ansible, terraform....
+			open source tools
+	Managed Services ---
+	AWS 
+	Az
+	GCP 
+	
+	Lab ::: 
+	
+	AWS Cloud Platform -- VMs 
+	
+	DevOps :::
+	
+		Application Development proces :::
+	
+	Application ::: 
+		Software ::::
+		
+	SDLC ::: Software Development LifeCycle ::::
+	
+	Applications :
+		Desktop Appln.
+		Web Appln.
+		Mobile Appln.
+
+	SDLC :::
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+		
+	develop an appln.
+	
+	Application :::
+	
+	Monolith Application Architecture 
+	
+	Online shopping Cart:
+	
+	SDLC Strategy : 
+	
+	Waterfall model : Linear Approach.
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!
+	
+		Requirement Analysis
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Agile Methodologies :
+	
+	Project / Application is composed of various Modules or Iterations
+
+	Online shopping Cart:	(sign-in,payment modules.....)
+	
+	sign-in Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+	
+	Payment Module:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!		
+	
+	cardless payment:
+		Requirement Analysis	
+		Design 
+		Code
+		Test
+		Deploy
+		Monitoring!	
+		
+	
+	Production Deployment 
+	
+	Telecom Domain :::
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::
+	
+	
+	DevOps ::: SDLC Strategies :::
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up				Developers --> write  code, use DB, config, testing, integrate -- deployed to prod.	
+	Sign-In
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 
+	
+	Agile Methodologies : Module / Iteration
+		
+		Developers --> write  code, use DB, config, testing, integrate 
+		But, cannot be deployed to prod independently.
+	Here the prod deployment happens at the Application Level.
+	
+	
+	DevOps ::: SDLC Strategies ::: 
+	
+		Microservice!!!
+		
+		Microservice based Architecture 
+
+	Application Architecture :
+	
+		-	Monolith Architecture 
+					- Tightly coupled Applications 
+					- Dependencies are cannot be splitted into modules. 	
+					
+		-	Micro Service Based Application Architecture
+					- Are Designed by the Application Architects/Owners
+					- De-couple the appln.
+					- Independently developed, tested and deployed to production, without impacting other services	
+	
+	www.amazon.com :::
+	
+	Easy to access!!!!
+	
+	Sign-Up		- microservice1 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	Sign-In		- microservice2 - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.
+	Search
+	Add to Cart 
+	Payment 
+	Place Order 
+	Track
+	Review 	
+	newservice  - microservice-n - Developers --> write  code, use DB, config, testing, integrate --> deployed to prod.	
+	
+		Monolith Architecture		 (vs)			Microservice based Architecture
+	
+
+	SDLC ::: 
+	
+	Who are all involved in this whole software development process :
+	
+		-	Business Analyst
+		-	Appln. Architect
+		-	Dev Team
+		-	Project Manager
+		- 	Team Lead
+		-	Test Engg.
+		-	Release Engg.
+		-	Prod Team for Deployments
+		-	Delivery Manager
+		-	DB Admins
+		-	Monitoring 
+		- 	Infra-Structure Team
+		-	QA Team
+
+
+	Traditional SDLC Process:: AGILE 
+	
+		-	Business Analyst,Delivery Manager,Appln. Architect 	===> 
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.
+	
+	Telecom SP1 ::: Want to introduce new offer to his customers
+	Telecom SP2 :::	
+		
+		Matured SDLC Strategies that can eliminate all these issues 
+		
+	DevOps :: SDLC Strategies --- 
+		
+	DevOps Stages :
+
+		Devteam --- Develop application
+		
+		Continuous Development : Tools like IDEs integrated with DevOps Tools.
+			Understanding the design doc. 	--> Code --> Build Code --> Create Artifacts --> Unit test
+											--> Publish/promote the appln to Testing Team for further Testing
+											--> Work on bug fixing
+			
+			Code ==> Developed IDEs (Integrated Development Environment) - Visual Studio Code, Eclipse based IDEs
+			Application Build : Compile the source code --- Create the executables(binaries)/Artifacts 
+			Unit Testing 
+		
+		Continuous Integration : Ensures high frequency of code integration for further testing.
+		
+		Continuous Testing : DevOps introduces Automated Testing Tool to achieve Continuous Testing.
+		
+		Continuous Delivery / Deployment ::: Is strategy that helps to speed-up production releases.
+		
+		Continuous Delivery (vs) Deployment 
+		
+		Environments :::
+		
+		Non-Prod Environment										Prod Environment 
+		
+		DEV 
+		Build
+		Test
+			QA 
+			UAT 											===>	Prod 
+		
+		Continuous Delivery 	===> Requires Manual Approvals from various stakeholders
+											Security Audits
+		
+		Continuous Deployment 	===> This doesn't expects any Manual intervension -- It is completely automated.
+										i.e., without manual approval we can do the production releases.
+		
+
+		www.amazon.com 
+		netflix
+		facebook
+		google 
+		
+		Critical Applications : INS,FIN
+			online banking / credit 			
+		Create a deployment window 
+			
+		AGILE Methodologies 
+				---> we can Achieve Continuous Development,Integration,Delivery. But NOT Continuous Deployment
+		DevOps Strategies 
+				---> we can Achieve Continuous Development,Integration,Delivery,Deployment,Monitoring, etc.....
+	
+		
+		Continuous Monitoring :: App. Infra, Security, vul, malware....
+		
+		www.amazon.com 
+	
+	DevOps is a Software Development strategy which promotes collaboration between Development and Operations Teams to achieve Continuous Integration & Continuous Delivery/Deployment in more automated fashion.
+
+	It consists of various stages like, Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring.
+
+	What is your Role ?
+	
+		- 	Infra-Structure Team								===> Provision infra
+		-	Project Manager, Team Lead, Dev Team				===> Develop appln.
+		-	DB Admins											===> DB Management
+		- 	Test Lead, Test Engg., QA Team						===> Thorough testing 			
+		-	Release Engg., Prod Team for Deployments			===> Prod Deployment/Rel.
+		-	Monitoring 											===> To maintain stable production envi.	
+			
+	DevOps Engg. DevOps Architects, DevOps Consultants 
+	
+		DevOps is all about the People, process/strategies, Tools.
+		
+		
+	Tools :::
+	
+	DevOps Tools ::
+	
+		Managed Services/Tools  
+			- by the cloud service providers 
+			- AWS, AZURE, GCP 
+			
+		Self-Managed Services/Tools 
+			- Open-Source Tools 
+					CDevelopment , CI, C-Delivery/Deployment, Continuous Monitoring, Infra-Structure Provisioning
+					Configuration Management 
+					
+					GIT
+					Jenkins
+					Docker
+					Kubernetes
+					Ansible
+					Terraform
+					Prometheus/Grafana
+
+	
+########
+DAY-2
+########					
+	
+		Fundamentals of Application Programming!!!!
+			What is programming?
+			Java Programming
+			Python Programming
+		
+		Software Program ???
+		
+		-	set of instruction ?
+		-	task ?
+		- 	set of inputs & outputs
+		- 	type of written lang.
+	
+		Programming Lang. is secondary!!!!
+		
+			ADA, BASIC, COBOL, .Net,c,c++ Java, python, nodejs, angular,........
+	
+		Task??		
+		How to build the task??
+	
+		Software :::
+		
+			Application Software 
+				E-Commerce 
+				Banking
+				Insurance
+				Retail
+				Healthcare 
+				
+				Desktop Application
+				Web Application 			Java, Python 
+				Mobile Application 
+			
+			System Software 
+				Operating System 
+				3rd party tools & services 
+				
+		Programming Languages ::
+	
+		C Programming 
+		
+		Develop Web Application ::
+		
+		Java Programming Language!:::
+		
+		How to start your programming ?
+		
+			1. Requirement Analysis	
+			2. Design Document
+			
+			Code
+			Test
+			Deploy
+		
+		Freelance Web Developer!
+		
+	Static Web Page - Collecting Customers feedform
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+			
+	Write a Program!
+	
+	1. Write an algorithm to get the sum of two numbers.
+	
+	
+		5 + 5 = ?
+		
+		123123.1312312 + 12.4 = ?
+		
+		9999999999999 + 11111111111111 = ?
+		
+		1.5 + 1.5 = ?
+
+
+	DevOps Automation :::
+	
+		shell scripts 	--> Linux 
+		python scripts 	--> 
+		groovy scripts	--> 
+		yaml scripts 	--> 
+
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+			Psudo code is specific to programming langauge
+		3. Coding
+		4. Tested 
+		5. Deployed	
+
+
+	DevOps Engg. ::: --> Create a automation script to build(compile & create artifacts) a java application.
+	
+		1. Requirement Analysis 		
+		2. Design Document
+			Flowcharts
+			Algorithms	
+				-	Step-by-Step procedure to do a task, written in highlevel langauge
+				-	It should be reusable
+				- 	It should be generic and should provide optimized soln.
+		3. Coding -- 
+		4. Tested 
+		5. Deployed	
+		
+	
+	Developers are writting some src codes --> 
+		where the source code will be save ?
+		
+		Source Code Management Tool :
+		Remote Repository to maintaining the source code!
+	
+	Remote Repository :
+	
+		www.github.com ===>
+		Create github account 
+			sign-up 
+	
+	Installation of tools 
+	
+	Application Development ::::
+	
+		Tools ::::
+		
+		Development Tools :::
+					
+			IDEs 	--> Eclipse IDE for Enterprise Java and Web Developers
+							https://www.eclipse.org/downloads/packages/release/2021-03/r/eclipse-ide-enterprise-java-and-web-developers
+					--> Eclipse IDE for Java Developers
+					--> Visual Studio Code 			
+					
+		
+	
+########
+DAY-3
+########
+
+
+		Developers!!!!
+		
+			New Service/product --- Source Code will be NEW. i.e., Application will be created from scratch.
+			
+			Change Requests(CR) --> Application src code is already present, make some incremental changes on it
+			Bug-fixing	--> Application src code is already present, make some incremental changes on it
+
+
+
+		Monolith Application Architecture :::
+		
+			Application1 - 
+			
+				Split the application into various Modules/Functions/Tasks: 1 Modules 
+				
+				Each task/modules can be developed/unit tested independently 
+				
+				But, the final deployment should be as a whole application.
+				
+				Monolith Applications are tightly coupled applications.
+				
+		
+		Microservice Application Architecture :::
+	
+			Application1 : On-line Registration Form
+			
+				Split the application into various Modules/Functions/Tasks/ 
+				
+				Each task is referred as service.
+				
+				Each service can be developed/unit tested independently and integrated to high envi. for further testing.
+				
+				Also, the services can be independently deployed to production.
+					
+		
+		Modules/Functions/Tasks/SERVICE ::::
+		
+		Single Tier Application
+		Two Tier Application
+		Three Tier Application
+		
+		User SIGN-UP Module1 ::
+		
+			Access the URL 
+			Choose SIGN-UP Option 
+			Display the SIGN-UP Form
+			Enter the required details
+			Validation 
+			
+		Name 	: 234234234234234
+		Phone 	: adfasdfsadf
+		EMail 	: 2342342423424sdfasdfasdfs
+		
+			Database:
+			
+			3-Tier Application Architecture
+			
+				Front-End/User Interface 	---> HTML/asp.net 
+				Business Logic 				---> Programming Language Java/Python/C#.Net
+				Database 					---> Oracle/Mysql
+			
+			2-Tier Application Architecture
+		
+			Front-End/User Interface 	---> HTML/asp.net 
+			Business Logic 				---> Programming Language Java/Python/C#.Net
+
+	
+			
+		Service ::: 
+		
+			Infra-Structure!
+				?
+			
+			
+			Application Development!
+			
+			
+			Application Release/Deployment!
+			
+		
+		
+		Module 5 AWS Fundamentals :::
+		
+		
+			Infra-Structure Team : ---> to Provision the Infra Structure!
+			
+				Computing Device  --> Install all the required tools 
+					jdk,...
+			
+			On-Premises:: 			Cloud Platform::
+		
+		Business Owner ::
+		
+		
+			E-Learning Portal.
+			
+			Web-Site!'
+			
+				Infra-Structure :
+					Develop my application
+					Test
+					Release 
+				
+				Computing Devices! 
+					Operating System
+					Softwares 
+					Networking 
+					Storage
+					User Access Control 
+					Security Management 
+				
+			On-Premises Environment :::
+		
+				Own Data Center / Servers :
+					Computing Devices! 
+						Operating System
+						Softwares 
+						Networking 
+						Storage
+						User Access Control 
+						Security Management 
+						
+			
+			Cloud Computing
+						
+				Own pulic/private cloud :
+					Computing Devices! 
+						Operating System
+						Softwares 
+						Networking 
+						Storage
+						User Access Control 
+						Security Management 
+		
+	
+
+			SAAS ::: 
+	
+	
+	Summary :::
+		• Understanding of Physical and Virtual Servers
+		• Overview of Public/Private Cloud Computing
+		IAAS
+		PAAS
+		SAAS
+		
+		Private cloud
+		Public
+		Hybrid
+		Community
+		
+		On-Premises & Cloud 
+		
+	Next ::
+
+		AWS --> 
+		
+		
+		
+		
+########
+DAY-4
+########
+
+		Cloud Computing - AWS 
+		
+			Feature of AWS, Azure, GCP
+			
+			Access AWS Cloud .
+				Create AWS Account 
+				Login 
+				Launch AWS Instances
+
+		DevOps Tool :::
+		
+
+
+	Java application : *.java  
+	
+		Build 	-- Compile & Create artifacts(binaries/executable)
+		Test 	-- Tested in Test environment. - Tomcat/Nginx(App. Server)
+		
+		QA-Server -- Launch server 
+		
+			Automate the server provisioning!
+
+			Scripts ---> IAC Tools 
+			
+			
+		Terraform 	--- IAC Tool 	---> Provision the servers. using server template/images
+		Ansible  	--- IAC Tool	---> Configure the Servers. 
+		
+		Eg.: 
+		
+			Build a java application. 
+			
+			Pre-requisites :
+			
+				Application
+				Build-Server	-- to automatically create the server we use Terraform
+				Build-Tools 	-- to automatically configure(Installation) the server with required tools, we use Ansible
+				
+			Infra-Structure --> 
+			Build Tools 	--> Maven[Compile & Create artifacts(binaries/executable)]
+				
+Re
+	Micro-service !
+
+
+
+		Virtual Machine ::::
+		
+		Every Cloud service providers have their own 
+			
+			Regions						
+				Availability Zones 		Data Centers 
+					VMs
+		
+		
+	DevOps Tools ::
+	
+		Managed Services/Tools  
+			- by the cloud service providers 
+			- AWS(codepipeline,codecommit,deploy,build) 
+			- AZURE(DevOps Services)
+			- GCP(DevOps Services) 
+			
+		Self-Managed Services/Tools 
+			- Open-Source Tools 
+					CDevelopment , CI, C-Delivery/Deployment, Continuous Monitoring, Infra-Structure Provisioning
+					Configuration Management 
+					
+					GIT
+					Jenkins
+					Docker
+					Kubernetes
+					Ansible
+					Terraform
+					Prometheus/Grafana
+	
+	
+	Enterprise-Level :::
+	
+		As a DevOps Engg. 	==> Should be strong in Open-Source DevOps Tools 
+							==> Aware of Managed Services from AWS/AZ/GCP 
+							
+		1. Create AWS Account - Free Tier ==> 12 Months. 
+		2. Explore the AWS User Interface and it services.
+		3. Create AWS Instance(VMs)
+		4. Login to AWS Instance 
+							
+	
+	Summary :::
+	
+		1. Create AWS Account - Free Tier ==> 12 Months.
+		2. www.github.com
+							
+
+
+#########
+DAY-5
+#########
+
+			AWS Region settings!
+			Account Settings!
+			
+			Billing Dashboard :
+			
+			AWS EC2 Instance -> 750 Hrs. per month.
+			
+			
+			1VMs  - 750.hrs / month
+			
+			10VMs --> 75hrs 
+		
+			AWS Services!
+			
+			
+			EC2 - Instances!!!!  ==> AWS - Virtual Machine 
+			Linux Machine!
+			
+			
+			IAC !
+			
+			- Launch EC2 Instance
+			
+				- Create key pair!
+				
+					*.pem
+					*.ppk
+					
+			SSH Client :::
+				****MobaXterm	--> *.pem
+					Putty		--> *.ppk
+			
+			
+			
+			Access AWS Instance ::
+			
+				Using EC2 Instance Connect
+				Using SSH Client
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+				Using Command Prompt
+				
+			Access the EC2 Instance
+				Using EC2 Instance Connect
+			
+			Public IP, Private 	
+			
+				Using SSH Client  use ssh connection using port 22
+					****MobaXterm	--> *.pem
+						Putty		--> *.ppk
+						
+		
+		
+		Organization :::
+			Created a Enterprise-Level AWS Account
+			
+		Email-id & password ===> Root Level 
+		
+		UserIDs 		developer1,.........,100
+		Roles			
+		
+		RBAC --> Role Based Access Control 
+		
+		User-Group ==> DEV_GROUP(developer1,.........,100)
+		
+		Public IP, Elastic IP/Static 
+		Private IP.
+		
+		
+		Kubernetes --> Open source 
+		
+		AWS --> EKS 
+		AZ  --> AKS
+		GCP --> GKS
+		
+#########
+DAY-6
+#########
+
+		EC2-Instances ::
+		
+			Security Groups:
+				Inbound Rules:
+					Use to control the incoming traffic to your instance
+				
+				Outbound Rules 
+					Use to control the outgoing traffic from your instance
+					
+		By Default :: Port 22 will be opened for SSH.
+		
+		If you want to add more inbound rules, goto to security tab, choose Security Group -- Edit Inbound rule
+		
+		
+		Amazon Linux 2 	-- user name : ec2-user
+		Ubuntu			-- user name : ubuntu
+		
+		Operating System :
+			Windows
+			
+			Linux***
+			
+			Mac 
+			
+		DevOps Role on Linux :
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+			Fundamentals of Linux
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> dir & files ... creation,read,update,delete
+				
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				Start and Stop the Application Services
+			Backup and Recovery
+			Memory Management 
+			Handling Remote Servers.
+				using SSH
+					Host Address 
+					User Name 
+					Authentication Key/Password
+
+	NOTE : FYI
+		General Linux Admin Activities :
+		
+			Managing the Linux OS itself:
+				Linux OS Security patch updates
+				Patch updates 
+				Volume Management(Memory Management) 
+				Access Management 
+				Remote Access Controll
+				Backup and Recovery
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> 
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				Start and Stop the Application Services
+				Handling Remote Servers.				
+				
+	Linux OS
+	Architecture of Linux OS
+	Linux Commands
+	
+		Linux is Open-Source.
+		
+			Linux Distributions were introduced 
+			
+				Fedoro...
+					
+				Debian...
+		
+		Unix 
+
+			Any adhoc Command 		:: Shell Command			
+			Series of shell command :: Shell Script
+			
+			
+		Programming Languages :: C,C++,JAVA,Python,C# 
+			==> Used to build business Applications
+			==> Used to Create Application Software 
+			==> Few are used to Create System Software 
+		
+		Scripting Languages :: shell, python scripts, groovy, yaml scripts, java scripts  
+			==> Process Automation 
+			==> Create DevOps Automation - CI/CD
+		
+		Unix 	
+			Linux Distributions were introduced 			
+				Fedoro...
+					centos,rhel,amazon linux 2 
+				Debian...			
+					ubuntu 
+			
+			Application / Packages / Service Managements
+			
+				Package Managers : It is used to install/Unstall/Upgrade the packges in Linux envi.
+				
+					yum		--> Federo Distribution Family
+					apt-get --> Debian - Ubuntu 
+
+		Fundamentals of Linux Commands :::
+		
+		
+		Linux System Users :
+		
+			Login as ec2-user or ubuntu 
+			
+			Only root user has complete access to Linux by default 
+			
+			All the packages are managed only by root user 
+			
+			Linux  is case sensitive
+			
+			small case!
+			
+		Commands :
+		
+			clear --> Clear screen/terminal 
+			
+			yum is the package manager used in Fedora Distribution Family 
+			
+			git is a devops tool 
+			
+			yum install git
+
+			yum update 
+		
+			sudo yum update 
+			
+			install the packages??
+			
+		
+		
+    1  yum update
+    2  exit
+    3  clear
+    4  hostname -i
+    5  ifconfig
+    6  clear
+    7  hostname -i
+    8  exit
+    9  hostname -i
+   10  ifconfig
+   11  clear
+   12  yum update
+   13  yum install docker
+   14  docker --version
+   15  apt-get docker
+   16  clear
+   17  yum update docker
+   18  yum update
+   19  yum remove docker
+   20  docker --version
+   21  amazon-linux-extras
+   22  amazon-linux-extras
+   23  clear
+   24  amazon-linux-extras
+   25  amazon-linux-extras install epel
+   26  amazon-linux-extras install java-openjdk11 -y
+   27  amazon-linux-extras install ansible2 -y
+   28  ls
+   29  clear
+   30  pwd
+   31  ls
+   32  touch file1.txt
+   33  ls
+   34  touch file1.md
+   35  ls
+   36  cat file1.txt
+   37  echo "Hello Team"
+   38  echo "Hello Team" >> file1.txt
+   39  cat file1.txt
+   40  ls
+   41  echo "Hello Team" >> file2.txt
+   42  ls
+   43  cat file2.txt
+   44  echo "Hello Team" >> file2.txt
+   45  cat file2.txt
+   46  echo "Hello Team, how are you?" >> file2.txt
+   47  cat file2.txt
+   48  clear
+   49  cat file2.txt
+   50  echo "Hello Team, how are you?" >> file2.txt
+   51  cat file2.txt
+   52  echo "Hello Team, how are you?" > file2.txt
+   53  cat file2.txt
+   54  echo "record1" > file2.txt
+   55  cat file2.txt
+   56  ls
+   57  clear
+   58  pwd
+   59  mkdir folder1
+   60  ls
+   61  pwd
+   62  cd folder1/
+   63  pwd
+   64  echo "rec1" >> file1.doc
+   65  ls
+   66  cd ..
+   67  ls
+   68  pwd
+   69  history
+					
+					
+				
+########
+DAY-7
+########				
+
+		DevOps Role on Linux :
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+			Fundamentals of Linux
+				User Mgmt.	--> ec2-user(default) root user , create some user.
+				File Mgmt.	--> 
+					-	dir & files ... creation,read,update,delete
+					-	access the files		
+				
+				Appln. Mgmt. --> Installation, Un-installation, Upgradation
+				
+				Start and Stop the Application Services
+				
+			****Backup and Recovery & Memory Management 
+			
+			Handling Remote Servers.
+				using SSH
+					Host Address 
+					User Name 
+					Authentication Key/Password
+					
+			Shell Scripts!!!
+			
+			
+	Commands: 
+	
+		mkdir 
+		cd 
+		cd ..
+		
+		echo "rec1" >> file1.txt
+		
+		touch file2.txt
+		
+		vi file3.txt 
+			press 'i'  ==> insert records in the file 
+			press esc :wq ==> to write and quit the file 
+			press esc :q! ==> to quit from file without making any changes
+			
+		rm -f file1.txt file2.md 
+		rm -f file1.*
+		
+		rm -r sdir*
+		rm -rf sdir1
+		
+		cp file1.txt sdir1/
+		cp *.doc sdir1/
+		mv file2.txt sdir1/
+		mv f1.txt filez.doc
+
+			
+		
+
+	[root@ip-172-31-36-117 subdir1]# ll
+	total 0
+	-rw-r--r-- 1 root root 0 Mar 12 05:14 f1.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f2.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f3.txt
+	-rw-r--r-- 1 root root 0 Mar 12 05:15 f43.txt
+		
+	-rw-r--r--		==> file 
+	d---------		==> directory 
+	
+	-				==> Component type i.e., file or dir
+	 ---			==> type/level of access at the user/owner level
+	    ---			==> type/level of access at the group level 
+		   ---		==> type/level of access at the user not part of the group 
+		   
+	-rwxrwxrwx 
+	
+	-rw-r--r-- 1 user1 dev 0 Mar 12 05:14 f1.txt
+	-rw------- 1 user2 dev 0 Mar 12 05:14 demo1.sh	
+
+	-rwxr-xr-- 1 user1 dev 0 Mar 12 05:14 demo1.sh	
+	
+	-rwxr-x--- 1 tuser1 test 0 Mar 12 05:14 testscript1.sh	
+	
+	dev group 
+		user1
+		user2
+	
+	test group 
+		tuser1
+		tuser2 
+
+	RBAC ---> 
+	
+	chmod 	==> Command is used to change the access mode 	
+	
+	chown	==> Command is used to change the ownership 	
+	
+	
+		Appln. Mgmt. --> Installation, Un-installation, Upgradation
+		
+			Install the DevOps Tools and Services
+				Kubernetes,Docker,Jenkins,Ansible,Terraform,GIT
+				
+		Install the pre-requisites
+		Install the actual package 
+		Config the Package 
+		
+		jenkins 				--> runs as a service -- and it run in default port 8080
+		
+			- jdk / jre 
+			- instal actual jenkins package 
+		git 				--> tool === can be accessed only on demand.
+		
+		jenkins 			--> runs as a service --  can be accessible till you shutdown ur server
+		
+		ansible ::
+
+
+		
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+		systemctl status jenkins
+		systemctl start jenkins
+		systemctl stop jenkins
+		systemctl enable jenkins
+		
+	
+	Services 	-- Run some tasks/application  -- Jenkins / Tomcat / Nginx / httpd.....
+	
+	Tools 		-- We can run any appln. 	git / VIM ... 
+	
+Summary :::
+
+	Fundamentals of Linux
+		User Mgmt.	--> ec2-user(default) root user , create some user.
+		File Mgmt.	--> 
+			-	dir & files ... creation,read,update,delete
+			-	access the files		
+		
+		Appln. Mgmt. --> Installation, Un-installation, Upgradation
+		
+		Start and Stop the Application Services
+
+	Assignment :::
+		For the weekdays : 13 - 17 
+			Will have Assignments on ::::
+					AWS Fundamentals :		1 & 2
+					Linux Fundamentals :	1
+					
+					
+	Algorithm ????
+
+		1. Write an algorithm to find sum of 'n' numbers 
+		2. Write an algorithm to find the maximum 'n' numbers
+		3. Write an algorithm to find the length of the string - "Linux is not boring"
+		4. Write an algorithm to check whether the given number is prime number or not.
+		5. Write an algorithm to find fibonacci series
+
+
+
+########
+DAY-8
+########
+
+		Linux ::: 
+		
+			Create Linux User
+				Check the access mode and change access mode 
+			Access Remote Servers.
+				Create remote servers
+				Establish connection between the servers 
+					Using specific user
+					
+			Shell Scripts
+
+		
+		Launch Instance :
+		
+		Access Linux Servers :
+		
+			SSH Connection -- Secure SHell 
+			
+				Authentication methods we have in SSH ?
+				
+					- Password/Token based Authentication
+					- Key based Authentication
+						-	public key and private key (SSH Keys)						
+					- Passwordless Authentication
+					
+		Launch / Create any server :::
+		
+			Create the username.
+			Define the ssh key / password 	
+			Grant required access to the newly created user 
+			
+		Jenkins 
+		Ansible ? - CM ??
+		
+			DevOps_Admin : (Remote server) install GIT 
+			
+				DEV_Team 1,2,3,4,5,6,7
+				
+				create group ?  
+				
+DevOps Team :				
+	Jenkins_Master 		vm -- username  private_key
+		Jenkins_Slave	vm -- username  private_key
+			
+	
+DevOps Team:
+	Ansible_Controller	vm -- username	public_key  		ssh_keygen
+DevTeam:
+		Ansible_Node1(DevTeam) vm - username public_key 
+		Ansible_Node2(DevTeam) vm - username public_key 
+		Ansible_Node3(DevTeam) vm - username public_key 
+		Ansible_Node4(DevTeam) vm - username public_key 
+		Ansible_Node5(DevTeam) vm - username public_key 
+			
+
+########
+DAY-9
+########
+
+		Linux shell scripts :
+		
+		Application Development Fundamentals :
+			Java Programming 
+			Python 
+		
+		
+		useradd -m -d /home/devopsuser devopsuser
+		
+		ls -alrt
+
+		chown -R devopsadmin:devopsadmin /etc/ansible
+		
+		shell Scripts!!!!
+		
+			vi sample1.sh 
+			
+		chmod 755 script1.sh
+		
+		
+	Scripting Lang. (vs)
+	
+		handle_variables/Conditions/iterations/files/remote_Servers/
+		
+	variable can be static / dynamic 
+	
+	
+	4 --> even number ?
+	
+	4%2 = remainder = 0
+	
+#!/bin/bash
+# Define for loop in C-style format
+for (( n=1; n<=$1; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+
+#!/bin/bash
+# Define for loop in C-style format
+upper_limit=$1
+input_param2=$2
+echo @input_param2 
+
+for (( n=1; n<=$upper_limit; n++ ))
+do
+    # Check the number is even or not
+    if (( $n%2==0 ))
+    then
+        echo "$n is even"
+    else
+        echo "$n is odd"
+    fi
+done
+
+script1.sh var1 var2
+
+199 ==> even or odd ??
+
+Check whether the given number is even or odd ?
+
+#!/bin/bash
+n=$1
+# Check the number is even or not
+if (( $n%2==0 ))
+then
+	echo "$n is even"
+else
+	echo "$n is odd"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Iterate from 2 to n/2, i as looping variable.
+If the number is divisible, Then  - The number is not a prime number. 
+Assign a flag = 1;
+If the flag != 1, say  - The number is a prime prime number
+Stop
+
+#!/bin/bash
+echo "Enter a number: "
+read num
+i=2
+f=0
+while [ $i -le `expr $num / 2` ]
+do
+if [ `expr $num % $i` -eq 0 ]
+then
+f=1
+fi
+i=`expr $i + 1`
+done
+if [ $f -eq 1 ]
+then
+echo "The number is composite"
+else
+echo "The number is Prime"
+fi
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~````
+
+
+#!/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+7 ==> prime number or not ?
+
+1 
+2 
+3
+4
+5
+6
+
+vowels!!! 
+
+
+*********************************************************
+
+
+#!/bin/bash
+a="Team"
+echo "Hello $a"
+b="Hai"
+echo "Hello $b"
+echo "Hello $1 $2"
+sudo yum install vim -y
+
+
+./script1.sh val1 val2 
+
+
+*********************************************************
+
+# !/bin/bash
+num=150
+if [ $num -gt 100 ] && [ $num -lt 200 ]
+then
+        echo "The number lies between 100 and 200"
+fi
+
+*********************************************************
+
+# !/bin/bash
+
+if [ $# -ne 1 ]
+then
+        echo "You need to enter the year."
+        exit 1
+fi
+
+year=$1
+
+if [ $[$year % 400] -eq "0" ]
+then
+        echo "$year is a leap year!"
+elif [ $[$year % 4] -eq 0 ]
+then
+        if [ $[$year % 100] -ne 0 ]
+        then
+                echo "$year is a leap year!"
+        else
+                echo "$year is not a leap year."
+        fi
+else
+        echo "$year is not a leap year."
+fi
+
+
+*********************************************************
+
+# !/bin/bash
+Balance=900
+if ((Balance < 0)); then
+  echo "Balance is less than zero, Please add more funds else you will be charged penalty"
+elif ((Balance == 0)); then
+  echo "Balance is zero, please add funds"
+else
+  echo "Your balance is above zero."
+fi
+
+
+*********************************************************
+
+#!/bin/bash
+read -p "Enter theory marks: " quiz_marks
+read -p "Enter practical marks: " assignments_marks
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+
+#######################################################################
+
+#!/bin/bash
+quiz_marks=80
+assignments_marks=70
+if (($quiz_marks > 50));
+then
+  echo "Please check the input marks for quiz."
+elif (($assignments_marks > 50));
+then
+  echo "Please check the input marks for assignments."
+else
+  echo " Your total marks: sum=$(( quiz_marks + assignments_marks))"
+fi
+
+
+
+
+
+	Application Architecture :
+	
+		-	Monolith Architecture 
+					- Tightly coupled Applications 
+					- Dependencies are cannot be splitted into modules. 	
+					
+		-	Micro Service Based Application Architecture
+					- Are Designed by the Application Architects/Owners
+					- De-couple the appln.
+					- Independently developed, tested and deployed to production, without impacting other services	
+					
+	
+	Database ????
+	
+		Application Architecture ::
+		
+			1 - Tier 
+			2 - Tier 
+			3 - Tier 
+	
+	3 - Tier		
+		- 	User Interface 
+		-	Business Logic 
+		-	Database 
+	
+	2 - Tier
+		- 	User Interface 
+		-	Business Logic 
+	
+	1 - Tier 
+		-	Business Logic 		
+		
+		
+	Web Application ::
+		
+		Static Web Application 	- 	blog-sites, articles
+		Dynamic Web Application - 	Will have continuous interaction.
+		
+	Application ::
+
+		Java 
+		
+			varible	--> 				
+					int i = 0;
+					char c = "A";
+			Group of Varible ? Array of Variable -- identified by an index (starting with 0)
+					String cust_id[5] = {a,s,d,f,g}
+					String cust_name[5] = {cd,sd,fe,wd,ds}
+				
+				eg.: 
+					cust_id(2) = 'd' 
+					cust_id(0) = 'a'
+					cust_id(5) = ?  out of Index Exception/Error
+					
+					Dynamic Array :
+					String cust_id[n] = {1.....1000}
+					
+				cust_Database :: 1.....1000
+			
+			Conditional statements 
+				if, switch-case
+			Looping statements 
+				for,while,do-while loops
+			Handling Files 
+			Database 
+			
+			Appln -- Modules --> Functions..
+			
+				
+			int a = 5, b = 5, c = 0;			
+			c = a + b;			
+			print c
+
+			sum ()
+			{
+				int a = 5, b = 5, c = 0;			
+				c = a + b;			
+				return c		
+			}
+
+			sum (int a, int b, int c)
+			{			
+				c = a + b;			
+				return c		
+			}
+			
+			OOP Programming Concepts :::
+			
+			class 	-- collections func,varibles 
+			
+			object  -- instance of class 
+			
+			
+			class demo{
+				func1()
+				{
+				
+				}
+			}
+			
+			object s1;
+			
+			signin_class
+			{
+				func1()
+				func2()
+				func3()
+			}
+			
+			
+			sum ()
+			{
+				int a = 5, b = 5, c = 0;			
+				c = a + b;			
+				return c		
+			}
+			
+			sum (int a, int b, int c)
+			{			
+				c = a + b;			
+				return c		
+			}			
+			
+			sum (int a, int b, int x, int y, int c)
+			{			
+				c = a + b;			
+				return c		
+			}
+
+
+		Abstration
+		Encapsulation
+		Inheritance 
+
+			
+			User_Login Page ===> user_id & password 
+			
+			Display - Transaction page ===> User_Name
+			
+		Java --
+		 how to create a class 
+			package ==> class ==> func 
+		 compile & execute. 
+
+
+Summary :
+
+	Linux command, with SSH Access.
+	Shell Scripts 
+	Intro Appln. JAVA programming.
+
+Assignment ::
+	Linux level 2.
+	
+	Linux Commands for practise.
+	
+NEXT : 
+
+	Launch AWS Windows Machine.
+	
+		Install Java - jdk 
+		Eclipse 
+		Tomcat
+		git 
+
+	Create Java Console Application using Eclipse 
+	Create Java Web Application using Eclipse and run in Tomcat 
+	
+		Python  
+		Eclipse 
+		Flask webserver for python
+		git 
+
+	Create Pytho Console Application using Eclipse 
+	Create Python Web Application using Eclipse and run in Flask webserver
+		
+
+
+	
+					
+					
+					
+
+OOPS Concepts :::::
+
+Object
+
+An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory. Objects can communicate without knowing the details of each other's data or code.
+
+
+Class
+Collection of objects is called class. It is a logical entity.
+
+A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.
+
+Inheritance
+When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+
+Polymorphism
+If one task is performed in different ways, it is known as polymorphism. 
+
+Abstraction
+Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing.
+
+Encapsulation
+Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
+
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
+Advantage of OOPs over Procedure-oriented programming language
+1) OOPs makes development and maintenance easier, whereas, in a procedure-oriented programming language, it is not easy to manage if code grows as project size increases.
+
+2) OOPs provides data hiding, whereas, in a procedure-oriented programming language, global data can be accessed from anywhere.
+
+
+
+########
+DAY-10
+########
+
+	Fundamentals of Application Prorgamming!
+		
+
+	Launch AWS Windows Machine.
+	
+		Install Java - jdk 
+		Eclipse 
+		Tomcat
+		git 
+
+	Create Java Console Application using Eclipse 
+	Create Java Web Application using Eclipse and run in Tomcat 
+	
+	
+	Java Application :::
+	
+		Console Applications 
+		Web Applications 
+		
+	Continuous Development
+	
+		Eclipse based IDEs - (Integrated Development Environment)
+			Eclipse based IDE for Java Developers / EE for Web Appln.
+			
+		Pre-requisites ::
+			Eclipse based IDE EE.
+			Openjdk
+			Configure the IDE 
+		
+		in Windows Machine! / Uduntu.
+		
+		Dev_System
+		
+		AWS Platform. 
+		
+			- Launch AWS Windows machine.
+				login to aws windows machine
+				
+			- install jdk, eclipse, tomcat
+			- Config Environmental variables
+
+
+		Install OpenJDK
+		Setup Environmental Variable for jdk_20
+		
+		Install Eclipse
+		
+		Java application ::
+		
+		
+		Developers ::;
+		
+			Code --> 
+			
+		Non-Prod																				Prod 
+		Dev (coding -- Unit Testing) --> Development & build (Compile & Create artifacts/binaries/executables - *.war/*.jar)
+		Test
+			QA
+			UAT	 
+			pre-prod																				Prod 
+			
+		Install jdk & eclipse & Unit Testing(jUnit)
+		
+		Maven Build tool 
+		Maven project --> create/install the required unit-testing tools(junit)
+		
+		*.java
+		Unit_Test Cases.
+			Unit_Test Data, Scenarios
+			Unit Test Report.
+		
+		
+		Tomcat --> Application server --> used to run java web applications.
+		
+		Test_Servers/Prod_Servers  (*.war/*.jar)
+			are called as Hosted Servers/Deployment Servers/Target Servers 		--> VMs (Hardware)
+			
+		Tomcat / Nginx ==> Application Servers --> Software
+		
+		Tomcat --> 
+			
+		Configured Tomcat in Eclipse !!!
+		
+########
+DAY-11
+########	
+			Java Application Development using Maven
+			
+			
+			Java web appln. / console application ::::
+			
+			Micro service based architecture :::
+			
+				dependencies 
+				plugins 
+			
+			Maven Based Java Application.
+				pom.xml ==> define all the required dependencies & Plugins that are required to build/package the java aapplication.
+				
+				
+			Micro-services ==> java based....
+			
+				dev_server 		-- 	Created the code.
+									create pom.xml --> maven compiler v1.23, Junit 2.1.34
+									
+				Build_server 	-- 	Used to build the appln. artifacts. -- build tool like maven, (compiler) | Unit Testing - Junit Tool
+									Build Appln. Docker Image
+			
+			Java Maven Appln.
+			
+				pom.xml ==> define all the required dependencies & Plugins that are required to build/package the java aapplication.
+				
+				
+		mvn clean package !!!
+		
+		Types of build tools : ANT,Gradle,Maven
+		
+		Create a Maven Project.
+		
+		Created a Maven Console Application.
+		
+		JUnit Tools Integration in Maven Application. 
+		
+		What is Unit Testing ?
+		
+			sum(int a, int b) 
+			{
+				int c = a + b
+				return c
+			}
+			
+			JUnit Test Tools is used for.
+				It generates the Test Reports :-> Test Coverage => 100%, 75%, Test Result => How Many Test Scenarios ? | Passed ? | Failed ? | skipped?
+			
+			TestNG 
+			
+			Test Data :
+			Test Scenarios :
+			Test Cases :
+			
+				==> 23 + 45 == ? successful or fail 
+					100 + 100 == ?
+					1231.12312 + 1231.123 == ?					
+					123123123123123123 + 1231241241241241241412412412 = ?
+		
+		Summary :
+		
+		How to create simple java console application  & Web Application using Eclipse?
+		How to create simple java Maven application using Eclipse?
+		How to create simple java Maven application  using JUnit Testing?
+		Importance of Maven Project, pom.xml file
+		Maven Repositories
+		How to create POM.xml File?
+		Maven Goals :
+			● mvn clean - to clean the target folder.
+			● mvn compile - to compile the source code
+			● mvn test - to compile and execute junit test cases
+			● mvn package - to compile, test and package the application
+			● mvn install - to install the package to local repository.
+			● mvn deploy - to deploy the package from local repository to remote repository.
+
+		Level - 1 & 2 	--> Application Fundamental 
+		Level - 1 		--> Maven 
+		
+
+
+########
+DAY-12
+########		
+
+		Source Code Management System using GIT 
+
+		Developer ::
+		
+			test.java ==> pgm1
+		
+		eclipse workspace!
+		
+		project:
+		
+		 index.html ==> 
+		 
+		 <html>
+		 ---
+		 --
+		 ---
+		 1 func
+		 2 func
+         3 func		 
+		 </html>
+		 
+		 test the index.html
+		 
+		 1 - 10 func.
+		 
+		
+		Version Control System :::
+		
+		index.html (10 lines of code) --> saved index.html_v1.0
+		index.html (+10 lines of code) --> saved index.html_v1.1
+		index.html (-5 lines of code) --> saved index.html_v1.2	
+
+
+		Version Control System :::
+			- Is used to Version control the src code changes			--> assign unique commit_ID to the changes 
+			- Used to track the Changes.								--> who, when, what ?
+		
+		Types of VCS :::
+		
+		
+			Local VCS 				--> single user environment 
+			
+				
+			Centralized VCS 
+			
+				C-Server1
+					dev1
+					dev2
+					dev3
+			
+			Distributed VCS 
+		
+				Remote-Server1(source code repo)
+									dev1 - source code repo
+									dev2 - source code repo
+									dev3 - source code repo
+					
+		
+			Repository - Files & Folders
+			
+			GIT is the Open-Source Distributed Version Control System 
+			
+			GITHUB ==> Remote GIT Repository 
+			
+				Developers can clone the remote repository in local machine, and work independently in OFFLINE Mode.
+				
+			git - client 
+			
+			VM - Install GIT -->>  ---> Remote GIT Repository 
+		
+			Remote GIT Servers:
+				github --> Remote GIT Repository 				
+				gitlab
+				azure repository 
+				aws code repository 
+				bitbucket
+				
+			
+			Developer :::
+			
+				1 - Start Creating a New Project 
+				2 - Enhancements Project
+				3 - Bug fixing 
+			
+			
+			
+			GIT File Workflow :
+			
+					Local Machine 																		Remote Server 
+						Working Dir. --> Staging/Index Area --> Local Repo.			<==>						Remote Repo.
+				
+			Git Commands :
+			
+				git clone 		==> Used to clone the complete remote repository to local repo. & Working Dir.
+				git add			==>	Used to add the changes from working dir. to Staging/Index Area.
+				git commit 		==> Used to commit the changes from staging area to local repository.
+				git push		==> Used to push the changes from local repo to remote repo.
+				
+				git fetch		
+					==> Used to check if there is any incremental changes happened in remote repo. & Update only the local repo.
+					
+					It just fetches the incremental changes in local repo.. But, it will not merge to working dir.
+					
+				git pull		
+					==> Used to check and update the incremental changes from remote repository to local repo & Working Dir.
+					
+						git fetch + git merge 
+						
+				
+			Remote Repo :					
+					index.jsp 100 - lines of 20Kb 
+					++50 new lines == 150 lines of 30Kb
+					
+			Clone :
+				Local Repo :
+					index.jsp 100 - lines of 20kb
+				
+			git pull 	==> ++50 new lines == 50 lines of 10Kb			
+			git clone 	==> 150 lines of 30Kb
+					
+				
+			Install GIT :::
+			
+			Dev. Environment ==> 
+			
+			Install git in ur windows Machine :
+			
+				https://git-scm.com/downloads
+				
+				Download git and install in local windows machine.
+						git bash			-- Command Line Utility 
+						git gui				-- GUI
+
+
+
+
+			To work in local repo. 
+			
+			Open GIT Bash :
+				
+			
+			
+			GIT Branching Strategies :
+		
+			cd d:
+			
+				mkdir SA-Feb18
+					mkdir samplerepo1
+					mkdir samplerepo2
+					
+		
+		
+			How to create a local git repo.
+			
+			
+			git init 	==> Used to initialize local git repo.
+							Create .git dir	
+							Create default branch (master/main)
+		
+			Git Global Configuration:
+				git config --global user.name "Loksai_ETA"
+				git config --global user.email "Loksai_ETA@xyz.com"
+			
+			(Optional)
+				Git Local Configuration:		
+					git config user.name "Loksai_ETA"
+					git config user.email "Loksai_ETA@xyz.com"
+
+			Create files 
+			
+			git add .
+			git add <file_name>
+			git add *.java
+
+			commit
+			Commit Msg : used to identify the project_ID/Release_ID
+			
+			git log :
+			
+				git log --oneline
+				git log -3
+				git log --stat 
+				
+			git show ???
+			
+			git diff ???
+		
+		
+  501  cd d:
+  502  mkdir SA-Feb18
+  503  cd SA-Feb18/
+  504  mkdir samplerepo1
+  505  cd samplerepo1/
+  506  cd ..
+  507  mkdir samplerepo2
+  508  clear
+  509  ls
+  510  cd samplerepo1/
+  511  pwd
+  512  clear
+  513  ls
+  514  ls -a
+  515  git init
+  516  ls -a
+  517  cd .git
+  518  ls
+  519  cd ..
+  520  clear
+  521  clear
+  522  cd ..
+  523  cd samplerepo2
+  524  ls
+  525  ls -a
+  526  git init
+  527  ls -a
+  528  cd ..
+  529  cd samplerepo1/
+  530  clear
+  531  ls -a
+  532  echo "rec1" >> file1.txt
+  533  ls
+  534  cat file1.txt
+  535  git status
+  536  git add file1.txt
+  537  git status
+  538  git commit -m "Commit Message1"
+  539  git log
+  540  echo "rec1" >> file2.txt
+  541  git status
+  542  git add file2.txt
+  543  git commit -m "Commit Message2"
+  544  git status
+  545  git log
+  546  git config --global user.name "Loksai_ETA"
+  547  git config --global user.email "Loksai_ETA@xyz.com"
+  548  echo "rec1" >> file3.txt
+  549  git add file3.txt
+  550  git commit -m "Commit Message3"
+  551  git log
+  552  echo "rec1" >> file4.txt
+  553  git add file4.txt
+  554  git commit -m "Created File4.txt"
+  555  git log
+  556  clear
+  557  ls
+  558  echo "rec1" >> s1.txt
+  559  echo "rec1" >> s2.txt
+  560  echo "rec1" >> s1.java
+  561  echo "rec1" >> r1.md
+  562  ls
+  563  git status
+  564  git add r1.md
+  565  git status
+  566  git add *.txt
+  567  git status
+  568  git add .
+  569  git status
+  570  git commit -m "CM5"
+  571  git log
+  572  git log
+  573  clear
+  574  git log --oneline
+  575  git log
+  576  git log --stat
+  577  git log -3
+  578  git log -2
+  579  git log --oneline -2
+  580  git log --stat -2
+  581  clear
+  582  git log --oneline
+  583  git show 235f885
+  584  git show e3f95a1
+  585  ls
+  586  ls
+  587  clear
+  588  git status
+  589  ls
+  590  echo "record2" >> file1.txt
+  591  cat file1.txt
+  592  git diff
+  593  git add .
+  594  git diff
+  595  git status
+  596  git diff --cached
+  597  g it diff --name-only --cached
+  598  git commit -m "CM6"
+  599  git diff --cached
+  601  clear
+  602  git status
+  603  echo "rec1" >> q1.txt
+  604  git status
+  605  ls
+  606  git add .
+  607  git status
+  608  git rm --cached q1.txt
+  609  git status
+  610  ls
+  611  git add .
+  612  git status
+  613  git rm -f q1.txt
+  614  git status
+  615  ls
+  616  history
+	
+
+	Install GIT :
+	Work on all the basic GIT Commands as given.
+
+NEXT :
+		git ignore,reset,revert,branches,remote repos.....
