@@ -2157,3 +2157,502 @@ DAY-12
 
 NEXT :
 		git ignore,reset,revert,branches,remote repos.....
+		
+
+########
+DAY-13
+########
+
+		git ignore,reset,revert,branches,remote repos.....
+		
+		GIT Ignore :::
+		
+		 - Ignore the files from tracking....
+		
+		Local_Repo. 
+		Java_Project_web_Appln. :															===> Remote_Repository
+		
+			src/java/signin.java		==> database -==>  sql_query ==>  credential.
+			src/test/sampletes1.java
+			index.html
+			sample1.class
+			sample1.properties
+			Readme.txt 
+			project_documents/
+			target/mvn-hello-world.war
+			pom.xml 
+			db_credentials
+			secrets
+		
+
+		GIT Revert :::
+		
+		GIT RESET :::
+		
+		
+		git reset :::  all these reset options will reset the HEAD Pointer to the specific reset point.
+		
+			--soft 			--> just remove the changes from local repo. But the changes will be there in Staging and Working Dir.
+			--mixed 		--> Just remove the changes from local repo. and staging area. But the changes remains in Working Dir.
+			--hard			--> It completely removes the files from local repo, staging and working dir. 	
+
+		git reset will not create any new commit point. It just points to the specific reset point.
+		
+		ls --> Linux Command to list the files & Folders 
+		
+		git ls-files --> git command --> list the files/folders that are being tracked by git./present in stagin area.
+		
+		
+		git revert : Is used to revert the changes, It will create a new commit point.
+		
+		
+		git revert 		(vs)		reset 
+		
+		Shared Repository --> Use git revert.
+					git revert is used to revert one specific commit point.
+					It will create new commit point to denote the revert action.
+		
+		single user repository --> use git reset.
+		
+		git reset :::  all these reset options will reset the HEAD Pointer to the specific reset point.
+		
+			--soft 			--> just remove the changes from local repo. But the changes will be there in Staging and Working Dir.
+			--mixed 		--> Just remove the changes from local repo. and staging area. But the changes remains in Working Dir.
+			--hard			--> It completely removes the files from local repo, staging and working dir. 	
+
+		git reset will not create any new commit point. It just points to the specific reset point.
+		
+		
+		Enhancement project ::
+			v1.0
+			v1.2
+			v1.3
+			
+			--> deployed v1.4 to prod. ( Prod testing ) - deployment window ( 4 - 6hrs. )
+			
+			v1.0
+			v1.2
+			v1.3
+			v1.4
+			
+			--> revert v1.4 
+				new commitpoint - v1.4
+				
+		
+		git commit --> --amend 
+		
+		
+		GIT Branching :::
+		
+			master branch --> default Branch ==> 
+			
+		Branches are used to perform parallel development .
+		
+		project_repo1:
+			master 
+				index.html 
+				
+		Developer1
+			dev1_feature1
+				index.html
+				
+		Developer2 
+			dev2_feature1	
+				index.html
+				
+				asdf
+				sadf
+				asdffas
+				df
+				asdf
+				
+		
+		Git Branch Strategies :::
+		
+		
+		project_repo1:
+		
+			master (cm1,cm2,cm3)
+		
+			hotfix/bugfix/adhoc_Branch
+			
+				Release_Branch :
+				
+					Integration_Branch :	Team1
+					
+						Developer1 (cm1,cm2,cm3)
+						
+							feature1 (cm1,cm2,cm3)
+								f1cm1
+							feature2 (cm1,cm2,cm3)
+								f2cm1
+							feature3 (cm1,cm2,cm3)				
+								f3cm1
+
+						Developer2 (cm1,cm2,cm3)
+						
+							feature1 (cm1,cm2,cm3)
+								f1cm1
+							feature2 (cm1,cm2,cm3)
+								f2cm1
+							feature3 (cm1,cm2,cm3)				
+								f3cm1
+					
+					Integration_Branch :	Team2
+					
+						Developer1 (cm1,cm2,cm3)
+						
+							feature1 (cm1,cm2,cm3)
+								f1cm1
+							feature2 (cm1,cm2,cm3)
+								f2cm1
+							feature3 (cm1,cm2,cm3)				
+								f3cm1
+
+						Developer2 (cm1,cm2,cm3)
+						
+							feature1 (cm1,cm2,cm3)
+								f1cm1
+							feature2 (cm1,cm2,cm3)
+								f2cm1
+							feature3 (cm1,cm2,cm3)				
+								f3cm1
+
+
+			master 
+			
+				feature1
+				
+				feature2
+				
+				feature3
+				
+				
+		
+		Create GIT Branch :
+		
+			git switch -c feature1 
+			
+			git branch feature2
+			
+			git checkout -b feature3
+			
+		
+		GIT Merge :::
+		
+			--> git merge command should always be executed from the target branch.
+			
+			
+		rebase ::: 
+		
+		f1 --> master 
+		
+		Merge Conflict ::::
+		
+			--> When it occurs ?	
+					
+					Whenever more than one developers/features try to update the same file on the same line/record, merge conflict occurs.
+		
+			--> How to Fix Merge-Conflict ?
+			
+					1. Identify the file that is causing merge conflict.
+					2. Manually, review the file and update the necessary changes to be merged.
+					3. perform git add and commit the new changes in target branch.
+					
+			Always it is recommended to prevent Merge Conflict! 
+			
+			--> How to prevent Merge Conflict ?
+
+  617  clear
+  618  cd ..
+  619  ls
+  620  cd samplerepo2/
+  621  ls
+  622  cd ..
+  623  clear
+  624  ls
+  625  mkdir samplerepo3
+  626  cd samplerepo3/
+  627  ls
+  628  clear
+  629  ls
+  630  ls -a
+  631  git init
+  632  ls -a
+  633  vi .gitignore
+  634  git status
+  635  git add .
+  636  git commit -m "Initial Commit"
+  637  git log
+  638  git status
+  639  cat .gitignore
+  640  ls -a
+  641  ls
+  642  echo "rec1" >> sample1.java
+  643  echo "rec1" >> sample2.class
+  644* echo "rec1" >> readme.m
+  645  ls
+  646  git status
+  647  git add .
+  648  git commit -m "CM1"
+  649  git status
+  650  ls
+  651  echo "rec1" >> sample1.txt
+  652  cat .gitignore
+  653  git status
+  654  clear
+  655  ls
+  656  git status
+  657  echo "adfasd" >> asdf.adsf
+  658  git status
+  659  git add .
+  660  git status
+  661  ckear
+  662  clear
+  663  cd ..
+  664  mkdir samplerepo4
+  665  cd samplerepo4/
+  666  clear
+  667  git init
+  668  echo "rec1" >> file1.txt
+  669  git add .
+  670  echo "rec1" >> file2.txt
+  671  git add .
+  672  git commit -m "CM1"
+  673  clear
+  674  git log --oneline
+  675  echo "rec1" >> s1.txt
+  676  git add .
+  677  git commit -m "CM2"
+  678  echo "rec1" >> s2.txt
+  679  git add .
+  680  git commit -m "CM3"
+  681  echo "rec1" >> s3.txt
+  682  git add .
+  683  git commit -m "CM4"
+  684  echo "rec1" >> s4.txt
+  685  git add .
+  686  git commit -m "CM5"
+  687  echo "rec1" >> s5.txt
+  688  git add .
+  689  git commit -m "CM6"
+  690  clear
+  691  git log --oneline
+  692  ls
+  693  clear
+  694  ls
+  695  git log --oneline
+  696  git status
+  697  git ls-files
+  698  git reset --soft 37c3baa
+  699  git status
+  700  git ls-files
+  701  git log --oneline
+  702  git commit -m "CM6.1"
+  703  git log --oneline
+  704  ls
+  705  git ls-files
+  706  git status
+  707  git reset --mixed 37c3baa
+  708  git status
+  709  ls
+  710  git ls-files
+  711  git log --oneline
+  712  git add .
+  713  git commit -m "CM6.2"
+  714  ls
+  715  git ls-files
+  716  git status
+  717  git log --oneline
+  718  git reset --mixed 99dbfa6
+  719  git status
+  720  git ls-files
+  721  ls
+  722  git log --oneline
+  723  git add .
+  724  git commit -m "CM5.2"
+  725  git log --oneline
+  726  ls
+  727  git ls-files
+  728  git status
+  729  git log
+  730  git log --oneline
+  731  git ls
+  732  git ls-files
+  733  ls
+  734  git reset --hard cb459c5
+  735  git status
+  736  ls
+  737  git ls-files
+  738  git log --oneline
+  739  clera
+  740  clear
+  741  cd ..
+  742  mkdir.exe
+  743  mkdir samplerepo5
+  744  cd samplerepo4
+  745  clear
+  746  git init
+  747  echo "rec1" >> f1.txt
+  748  git add .
+  749  git commit -m "cm1"
+  750  echo "rec2" >> f1.txt
+  751  git add .
+  752  git commit -m "cm2"
+  753  echo "rec3" >> f1.txt
+  754  git add .
+  755  git commit -m "cm3"
+  756  echo "rec4" >> f1.txt
+  757  git add .
+  758  git commit -m "cm4"
+  759  clear
+  760  git status
+  761  git log --oneline
+  762  ls
+  763  git ls-files
+  764  clera
+  765  clear
+  766  git log --oneline
+  767  git show 9cb27d6
+  768  git revert d056505
+  769  git revert --abort
+  770  git log --oneline
+  771  git revert cb459c5
+  772  git log --oneline
+  773  git show 3d210c7
+  774  git ls-files
+  775  ls
+  776  git revert 3d210c7
+  777  ls
+  778  git log --oneline
+  779  git show d5c6d85
+  780  git status
+  781  echo "rec1" >> w1.txt
+  782  git add .
+  783  git commit -m "asdfadfnw3223"
+  784  git log --oneline
+  785  git commit -m "Valid Msg1"
+  786  git status
+  787  git log --oneline
+  788  git commit --amend -m "Valid Msg!"
+  789  git log --oneline
+  790  clear
+  791  clear
+  792  cler
+  793  clear
+  794  cd ..
+  795  ls
+  796  mkdir samplerepo6
+  797  clear
+  798  cd samplerepo6/
+  799  ls
+  800  git init
+  801  git branch
+  802  git status
+  803  echo "rec1" >> s1.txt
+  804  git add .
+  805  git commit -m "Initial commit from master"
+  806  git status
+  807  git branch
+  808  git log --oneline
+  809  ls
+  810  clear
+  811  git switch -c feature1
+  812  ls
+  813  git log --oneline
+  814  git switch master
+  815  git switch masterasdfsd
+  816  git branch
+  817  git switch feature1
+  818  git branch
+  819  git switch master
+  820  git branch feature2
+  821  git branch
+  822  git checkout -b feature3
+  823  git branch
+  824  git switch master
+  825  git checkout feature4
+  826  git log --oneline
+  827  git log --oneline
+  828  git switch feature1
+  829  git branch
+  830  ls
+  831  git log --oneline
+  832  echo "rec1" >> file1.txt
+  833  git add .
+  834  git commit -m "CM1 from feature1"
+  835  git log --oneline
+  836  ls
+  837  git switch master
+  838  git status
+  839  git log --oneline
+  840  ls
+  841  git merge feature1
+  842  git log --oneline
+  843  ls
+  844  clear
+  845  ls
+  846  git branch
+  847  cat s1.txt
+  848  git switch feature2
+  849  git log --oneline
+  850  echo "rec2" >> s1.txt
+  851  git add .
+  852  git commit -m "CM1 from feature2"
+  853  cat s1.txt
+  854  git log --oneline
+  855  ls
+  856  git rebase master
+  857  ls
+  858  cat s1.txt
+  859  git log --oneline
+  860  git switch master
+  861  git log --oneline
+  862  cd ..
+  863  ls
+  864  mkdir samplerepo7
+  865  cd samplerepo7/
+  866  git init
+  867  clear
+  868  git status
+  869  echo "rec1" >> s1.txt
+  870  git add .
+  871  git commit -m "CM1 from master"
+  872  clear
+  873  git switch -c feature1
+  874  git switch master
+  875  git switch -c feature2
+  876  git branch
+  877  ls
+  878  git log --oneline
+  879  echo "rec2" >> s1.txt
+  880  git add .
+  881  git commit -m "CM1 from feature2"
+  882  git log --oneline
+  883  cat s1.txt
+  884  git switch master
+  885  git merge feature2
+  886  ls
+  887  cat s1.txt
+  888  git log --oneline
+  889  git switch feature1
+  890  cat s1.txt
+  891  echo "rec2 from feature1" >> s1.txt
+  892  git add .
+  893  git commit -m "CM1 from feature1"
+  894  git switch master
+  895  cat s1.txt
+  896  git merge feature1
+  897  ls
+  898  cat s1.txt
+  899  vi s1.txt
+  900  git status
+  901  git add .
+  902  git commit -m "Resolved s1.txt Merged Conflict"
+  903  cat s1.txt
+  904  history
+
+
+						
+Next ::
+		rebase, squash,stash, remote repo handling....
