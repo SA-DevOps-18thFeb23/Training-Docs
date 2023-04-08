@@ -2656,3 +2656,428 @@ DAY-13
 						
 Next ::
 		rebase, squash,stash, remote repo handling....
+		
+#####################
+DAY-13 - 8th Apr.23
+#####################
+
+		GIT ::: Merge Concepts :
+		
+		Git Rebase ::::
+		
+			master 	--> cm1,cm2,cm3 												# Initial Commits before Creating Branches
+					==> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3								# Upon merging from feature1
+					
+					==> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3,f2cm4		# Upon merging from feature1 after rebase
+			
+				feature1 :--> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3		
+				
+					switch to master :
+						git merge feature1 
+			
+				feature2 :--> cm1,cm2,cm3,f2cm1,f2cm2,f2cm3,f2cm4
+						
+					git rebase master 
+							==> cm1,cm2,cm3,f1cm1,f1cm2,f1cm3,f2cm1,f2cm2,f2cm3,f2cm4
+				
+					switch to master :
+						git merge feature2			
+							
+		Git Squash ::::
+		
+			master 	--> cm1,cm2,cm3
+					--> cm1,cm2,cm3,FINAL_COMMIT_FROM_FEATURE1,f2cm1,2,3,4,5,6,7,8,........,100,f3cm1,2,3,4,5,6,7,8,........,100
+			
+				feature1 	==> cm1,cm2,cm3
+							==> cm1,cm2,cm3,f1cm1,2,3,4,5,6,7,8,........,100
+							
+							==> cm1,cm2,cm3,f1cm1,2,3,4,5-f1func1 ===> Just combined the commits to f1func1 
+							==> cm1,cm2,cm3,f1func1,f1func2,f1func3,f1func4,f1func5		
+				
+				feature2 ==> cm1,cm2,cm3,f2cm1,2,3,4,5,6,7,8,........,100
+				
+				feature3 ==> cm1,cm2,cm3,f3cm1,2,3,4,5,6,7,8,........,100			
+				
+	
+			Squash ::
+			
+				- Before Merge (While working in current branch)						==> git rebase -i HEAD~5
+							==> cm1,cm2,cm3,f1func1,f1func2,f1func3,f1func4,f1func5
+					
+				
+				- While Merging 														==> Goto to target branch(master)	
+																							git merge --squash feature1			
+							==> cm1,cm2,cm3,f1task1-commit
+							
+		
+		Git Stash ::::
+		
+			master :
+			
+				feature1 -- adding ur changes to index area .... 1,2,3,4,... == Move this changes to a temp. location in git
+				
+				adhoc-branch 
+				
+			Stash current work:
+				$ git stash
+
+				Saving stashes with a message: 
+				$ git stash save "<Stashing Message>"
+
+				Check the stored stashes: 
+				$ git stash list
+
+				Re-apply the changes that you just stashed 
+				$ git stash apply
+
+				Track the stashes and their changes: 
+				$ git stash show 
+				$ git stash show stash{0}
+				
+				Re-apply the previous commits: 
+				$ git stash pop
+
+				Delete a most recent stash from the queue: 
+				$ git stash drop
+
+				Delete all the available stashes at once: 
+				$ git stash clear
+
+				Stash work on a separate branch: 
+				$ git stash branch <branch name>
+
+		
+		GIT REMOTE REPOSITORIES ::::	
+
+			GIT File Workflow :
+			
+					Local Machine 																		Remote Server 
+						Working Dir. --> Staging/Index Area --> Local Repo.			<==>						Remote Repo.
+				
+			Git Commands :
+			
+				git clone 		==> Used to clone the complete remote repository to local repo. & Working Dir.
+				git add			==>	Used to add the changes from working dir. to Staging/Index Area.
+				git commit 		==> Used to commit the changes from staging area to local repository.
+				git push		==> Used to push the changes from local repo to remote repo.
+				
+				git fetch		
+					==> Used to check if there is any incremental changes happened in remote repo. & Update only the local repo.
+					
+					It just fetches the incremental changes in local repo.. But, it will not merge to working dir.
+					
+				git pull		
+					==> Used to check and update the incremental changes from remote repository to local repo & Working Dir.
+					
+						git fetch + git merge 
+
+			
+				
+				
+			Various Remote GIT Repositories :::
+
+				github 
+				
+				Az repo
+				gitlab
+				aws codecommit
+				bitbucket ....
+				
+			Working on Remote GIT Repositories :
+			
+				github 
+				
+					how to create remote git repo. 
+					working with remote repo.
+						create the branch
+						Merge using pull request...
+						
+				git clone 
+				
+				git pull
+				
+				git fetch 
+				
+				git push 
+				
+				git remote 
+				
+			git credentials :::
+			
+			remote github repo :
+			
+			userid 
+			
+			token 
+			
+			how to create github access token ?
+			
+			github account ID : 
+			Access Token : sdfsdfsdf9fg09df0dsuf09usdfgdfgdfgdfgdfdf
+			
+			
+ 501  cd d:
+  502  ;s
+  503  ls
+  504  cd SA-Feb18
+  505  ls
+  506  clear
+  507  ls
+  508  mkdir samplerepo8
+  509  clear
+  510  cd samplerepo8/
+  511  clear
+  512  git init
+  513  ls -a
+  514  clear
+  515  echo "rec1" >> f1.txt
+  516  git add .
+  517  git commit -m "CM1 from master"
+  518  echo "rec1" >> f2.txt
+  519  git add .
+  520  git commit -m "CM2 from master"
+  521  echo "rec1" >> f3.txt
+  522  git add .
+  523  git commit -m "CM3 from master"
+  524  clear
+  525  git log --oneline
+  526  git switch -c feature1
+  527  git switch master
+  528  git branch
+  529  git switch -c feature2
+  530  git branch
+  531  git switch master
+  532  ckear
+  533  clear
+  534  git log --oneline
+  535  git switch feature1
+  536  echo "rec1" >> s1.txt
+  537  git add .
+  538  git commit -m "CM1 from feature1"
+  539  echo "rec1" >> s2.txt
+  540  git add .
+  541  git commit -m "CM2 from feature1"
+  542  git status
+  543  git log --oneline
+  544  git switch master
+  545  git merge feature1
+  546  git log --oneline
+  547  git switch feature2
+  548  git log --oneline
+  549  echo "rec1" >> q1.txt
+  550  git add .
+  551  git commit -m "cm1 from feature2"
+  552  echo "rec1" >> q2.txt
+  553  git add .
+  554  git commit -m "cm2 from feature2"
+  555  git log --oneline
+  556  ls
+  557  git rebase master
+  558  git log --oneline
+  559  lslslsls
+  560  ls
+  561  git switch master
+  562  git merge feature2
+  563  git log --oneline
+  564  git branch
+  565  git log --oneline
+  566  cd ..
+  567  mkdir samplerepo9
+  568  cd samplerepo9/
+  569  git init
+  570  clear
+  571  git status
+  572  ls -a
+  573  echo "rec1" >> s1.txt
+  574  git add .
+  575  git commit -m "cm1 from master"
+  576  echo "rec1" >> s2.txt
+  577  git add .
+  578  git commit -m "cm2 from master"
+  579  git branch feature1
+  580  git branch feature2
+  581  git branch
+  582  git switch feature1
+  583  git log --oneline
+  584  echo "rec1" >> f1.txt
+  585  git add .
+  586  git commit -m "cm1 from feature1"
+  587  echo "rec1" >> f2.txt
+  588  git add .
+  589  git commit -m "cm2 from feature1"
+  590  echo "rec1" >> f3.txt
+  591  git add .
+  592  git commit -m "cm3 from feature1"
+  593  ls
+  594  git log --oneline
+  595  ls
+  596  git rebase -i HEAD~3
+  597  git log --oneline
+  598  ls
+  599  git switch master
+  600  git log --oneline
+  601  git switch feature2
+  602  ls
+  603  echo "rec1" >> q1.txt
+  604  git add .
+  605  git commit -m "cm1 from feature2"
+  606  echo "rec1" >> q2.txt
+  607  git add .
+  608  git commit -m "cm2 from feature2"
+  609  echo "rec1" >> q3.txt
+  610  git add .
+  611  git commit -m "cm3 from feature2"
+  612  echo "rec1" >> q4.txt
+  613  git add .
+  614  git commit -m "cm4 from feature2"
+  615  echo "rec1" >> q5.txt
+  616  git add .
+  617  git commit -m "cm5 from feature2"
+  618  git log --oneline
+  619  git switch master
+  620  git log --oneline
+  621  git merge --squash feature2
+  622  git log --oneline
+  623  git status
+  624  git commit -m "Combined changes from Feature2"
+  625  git log --oneline
+  626  ls
+  627  ckear
+  628  clear
+  629  ls
+  630  git status
+  631  git switch -c feature3
+  632  ls
+  633  echo "rec1" >> a1.txt
+  634  echo "rec1" >> a1.txt
+  635  echo "rec1" >> a1.txt
+  636  echo "rec1" >> a1.txt
+  637  git add .
+  638  ls
+  639  cat a1.txt
+  640  git status
+  641  git switch feature1
+  642  git status
+  643  git switch feature3
+  644  git status
+  645  git stash
+  646  git status
+  647  git stash list
+  648  echo "rec1" >> a2.txt
+  649  git add .
+  650  git status
+  651  git stash
+  652  git stash list
+  653  echo "rec1" >> a3.txt
+  654  git add .
+  655  git stash save "Added a3.txt"
+  656  git stash list
+  657  git stash show
+  658  git stash show stash@{2}
+  659  git stash show stash@{1}
+  660  git stash apply
+  661  git status
+  662  git commit -m "added a3.txt"
+  663  git status
+  664  git stash list
+  665  git stash drop
+  666  git stash list
+  667  git stash pop
+  668  git stash list
+  669  git stash show stash@{0}
+  670  git stash save "added a2.txt"
+  671  git stash list
+  672  git stash pop stash@{1}
+  673  git stash list
+  674  git stash save "added a1.txt"
+  675  git stash list
+  676  git stash clear
+  677  git stash list
+  678  git status
+  679  ehco "rec1" >> l1.txt
+  680  echo "rec1" >> l1.txt
+  681  echo "rec1" >> l1.txt
+  682  echo "rec1" >> l1.txt
+  683  echo "rec1" >> l1.txt
+  684  echo "rec1" >> l1.txt
+  685  echo "rec1" >> l1.txt
+  686  echo "rec1" >> l1.txt
+  687  git add .
+  688  cat l1.txt
+  689  git status
+  690  git stash
+  691  clear
+  692  git stash list
+  693  git stash branch temp-feature3
+  694* git statusi
+  695  git commit -m "Initial backup of feature3"
+  696  git branch
+  697  ls
+  698  git switch feature3
+  699  ls
+  700  cd ..
+  701  mkdir temprepo1
+  702  cd temprepo1/
+  703  clear
+  704  git clone https://github.com/SA-DevOps-18thFeb23/demo1.git
+  705  ls
+  706  cd demo1/
+  707  ls
+  708  ls -a
+  709  ls
+  710  echo "rec1" >> file1fromlocal
+  711  git add .
+  712  git commit -m "commit from local"
+  713  git remote -v
+  714  git push -u origin
+  715  git push -u origin main
+  716  clear
+  717  git push -u origin main
+  718  ls
+  719  git switch -c localf1
+  720  ls
+  721  echo "rec1" >> m1.txt
+  722  git add .
+  723  git commit -m "local feature1 changes"
+  724  git push -u origin localf1
+  725  cd ..
+  726  clear
+  727  cd ..
+  728  mkdir temprepo2
+  729  cd temprepo2
+  730  git init
+  731  echo "rec1" >> f1.txt
+  732  git add .
+  733  git commit -m "initial commit from local"
+  734  git branch -M main
+  735  git remote -v
+  736  git remote add origin https://github.com/SA-DevOps-18thFeb23/testrepo2.git
+  737  git remote -v
+  738  git push -u origin main
+  739  git status
+  740  git fetch
+  741  git status
+  742  git fetch
+  743  git status
+  744  ls
+  745  git pull
+  746  ls
+  747  git status
+  748  git status
+  749  git pull
+  750  git status
+  751  ls
+  752  git remote -v
+  753  git remote remove origin
+  754  git remote -v
+  755  history
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
