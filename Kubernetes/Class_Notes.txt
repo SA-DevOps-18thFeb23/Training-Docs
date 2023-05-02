@@ -1,0 +1,132 @@
+	
+##############
+30th Apr. 2023
+##############
+
+	Kubernetes Architecture :
+	Installation of Kubernetes
+
+
+	for next 3 days.
+	
+	CI/CD Pipeline ::::
+
+	pipeline --> jenkins_master, Slave, Docker build, kubernetes
+		
+
+	SCM Repo. github 
+
+		Continuous Development ::::
+			Eclipse based IDE to develope the code
+			MAVEN Web Application
+			Spring Boot Framework
+			Using Python
+			Commit the changes to github repo
+		
+		CI/CD --> SCM_Checkout, build artifacts, build docker image, deploy to kubernetes cluster
+
+		Contiuous Testing ::::
+
+
+	
+	Kubernetes ::
+		Master  ==> Just used to validate and schedule the pods to worker nodes.
+			Cluster :
+				Kubernetes Worker Node1
+				Kubernetes Worker Node2
+				Kubernetes Worker Node3
+				Kubernetes Worker Node4
+
+	Installation of Kubernetes :::
+
+		Kubernetes is a open source container orchestration Tool..
+			kubeadm 	==> install & config 
+			minikube 	==> light weight K8s Cluster. (Learning)
+
+
+	used kubeadm ::
+
+		Pre-requisites ::
+
+			2+ CPUs
+			3 GB of RAM
+
+	Managed Services ::	
+		AWS - EKS - Elastic Kubernetes Services
+		Azure - AKS
+		GCP - GKS
+
+	Pods :::
+		Atomic unit of task 
+
+	Kubectl
+		Command Line Utility :
+		Used to interact with Kubernetes Master
+		kubectl 
+	Namespaces
+	Pods Networking
+	Pods Volumes
+	Services
+
+	Controllers
+
+
+
+		kubectl get nodes
+
+
+	Pods ===> Pod IP will be generated.
+
+
+	
+
+
+
+
+
+	pod ID : 192.168.0.1						pod ID : 192.168.0.2
+	Container port : 8080						Nginx : 80
+		192.168.0.1:8080						192.168.0.2:80
+	
+
+
+
+
+				8080				80
+
+
+											pod ID : 192.168.0.4
+					localhost:8080 & localhost:80
+
+
+		
+	Kubernetes Services :::
+		
+		Cluster_IP
+		NodePort	nodeport range == 30000 -- 
+		Load_Balancer
+		
+															----> frontend pod
+
+	3-tier
+		Front_End 	- UI	
+		Back_End	- Database
+		Business Logics												----> Backend pod
+
+
+
+
+
+	Create a Pod :::
+
+		Manifest file :::
+	
+
+
+
+Assignments ::::
+
+	git - not opened. not yet started. ==> will be opened on 1st for two weeks.
+	java - completed
+	jenkins - 7th 
+	mvn - - not opened. not yet started. ==> will be opened on 8th.	
