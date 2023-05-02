@@ -1,0 +1,257 @@
+
+
+	Containerization using Docker::::
+
+		Application deployments :::
+
+			Deployment ?		===> *.war
+
+			build server -- created artifacts ==> tested using tomcat ==> helloworld.war --> 
+						jdk1.8, tomcatserver 8.5 ==> helloworld.war
+
+					package --> (helloworld.war,jdk1.8,tomcatserver 8.5) - app_pkg_v1.0 -- Images
+
+			deploy to target
+				QA		jdk1.6, tomcatserver 10		app_pkg_v1.0 (helloworld.war,jdk1.8,tomcatserver 8.5) 
+				UAT		jdk1.8, tomcatserver 8.5
+				PROD		openjdk11, tomcatserver 9
+
+
+	In general, 
+	Containers --> 
+
+		- Deployment
+			package --> (helloworld.war,jdk1.8,tomcatserver 8.5) - app_pkg_v1.0
+
+		- Infra-structure Containers are used at infra level :::
+
+		(VMs)Jenkins_Master :
+			(VMs) Slave1 ==> Java build 
+			(VMs) Slave2 ==> python 
+			(VMs) Slave3 ==> .Net 			..... 100 
+
+			Using Containers :::
+	
+		(VMs)Jenkins_Master :
+			(VMs)Jenkins_Slave
+				Install Docker Engine	
+					Container1	 ==> Java build	
+					Container2	 ==> python 
+					Container3	 ==> .Net
+		
+	What is VM (vs) Container ? 
+	The Container Images will be stored and maintained in Container Registry!
+	Dockerhub is one of the container registries.
+
+
+23rd Apr. 2023
+
+	What is Virtual Machine?
+	What is Containerization?
+	Virtual Machines (vs) Containers
+	Docker Architecture
+		Client
+		Docker Daemon/Engine
+		Docker Registry
+	Docker Engine
+	Docker Terminologies :
+		Docker Images/Containers/Registry/Repository
+	Install Docker.
+	Docker Commands.
+	Container Lifecyle
+	Container Volumes
+	How to work with Multiple Containers?
+	How to Orchestrate Containers?
+
+	Virtual Machine :::
+
+
+
+	VM : 	Are Harware level Virtualization 
+		Used to run OS and applications
+		It takes huge time to load and utilize the underlying hardware config.
+
+	Containers :	Are OS level Virtualizations - Namespaces/CG/Kernal
+			Containers are used to run the applications NOT Operating systems.
+			It is faster when compared to VMs.
+			If there is not task/appln. to execute, containers will immediately go to EXIT State.
+
+
+	Virtual Machines :::
+		EC2 Instances ::: VM 
+
+
+	Regions 
+		Availability Zones/Data-centers
+		Servers
+
+
+	Docker Terminologies :::
+
+		Docker Images ::	Package --> (Application artifacts along with its dependencies)
+					Images are not executables.
+
+		Docker Containers ::	Containers are executables.
+					Containers are used to run the images.
+					We cannot directly create containers. Docker Containers are created/executed only using docker images.
+		
+		Docker Registry ::	A platform to store all the docker images.
+					Docker Hub is the default docker registry.
+					Create the repository in the docker registry and store the images.
+					It contains many images - always it is recommended to choose the official verified images.
+
+
+
+	Installation of Docker Engine :::				
+
+
+	CICD Deployment Workflow using Docker :
+
+	Developers:
+		Use Eclipse / VS Code and create the application
+		Push the application into github repo.
+	DevOps :	
+		Using Jenkins CI/CD Pipline: (Build Orchestration Tool)
+
+			SCM Checkout :
+				- Checkout the latest code from github :
+			
+			Application Build : 
+				- Compile and create artifacts
+
+			Docker image Build :
+				- Build the docker image --> (Create docker application image along with its dependencies)
+			
+			Publish Image :
+				- Pubish / push the docker images to docker registry(dockerhub)
+			
+			Deploy using Kubernetes : (Kubernetes is called as Container Orchestration Tool)
+				- Pull the image from docker hub registry
+				- Deploy that image in the deployment servers --> QA/UAT/PROD
+
+
+	Installation of Docker Engine ::: https://docs.docker.com/engine/install/
+
+	Docker for windows: 
+
+		VM - Linux - Install Docker Engine
+
+	Linux ;--> Directly install Docker engine.
+
+	VMs..... 
+
+
+	tomcat ::: ==> install in a VM - qa-testing 
+
+
+	Using Container we can run tomcat. ::
+		
+	tomcat -- pull/run ==> 
+
+vm --> tomcat container 8080 --> 
+
+
+
+##############
+29th Apr. 2023
+##############
+
+	Docker & Kubernetes 
+	
+	- Docker Volumes
+	- How to execute Multiple Containers? 
+	- How to Orchestrate Containers?
+	- How to build application Images using docker
+	- Docker Registry
+	- Kubernetes
+
+	Container Volumes ::
+		
+		Life time of container?
+			
+		Application Image :
+		Deployed :
+
+		
+			Stateful Application
+			Stateless Application
+
+		Container1 --> webappln ==> create a log_file
+
+		Host Volume will be Mapped with the Container volume 
+
+
+	Micro_service Based Application :: ==> spring boot appln. 
+	
+		- will have its own scm repo., test cases, test scenarios, test approval, depolyments, dabase.... and image.
+
+	Run_My_appliation	==> 3-tier application ::
+
+		front-end		container1
+		backend			container2
+		business logic		container3
+
+	Docker Compose 	::: - is used to run multiple containers.
+	Docker Swarm 	:::	Is a container orchestration tool, which helps to orchestrate the container execution and ensure high availability of containers.
+
+	Kubernetes ::: 		Is a container Orchestration Tool.
+
+
+
+			
+	- How to build application Images using docker ?
+		
+		build application & Create artifacts 
+			mvn-hello-world.war 
+
+		build application Image out of this.	
+	
+		publish this application image to docker hub(Docker registry)
+
+		pull and execute(Kubernetes)
+
+
+	Docker pull / run ==> it is used to download/run the existing images from docker registry.
+
+	To Create Docker Image :
+
+		docker commit command 		
+			Used upate the image with more layers. 
+			Eg.: Centos Image
+				docker run -it centos bash
+				
+				exit 
+				centos_s1 ==> image
+
+
+		Create a container Image using Docker Commit :::
+
+
+		docker build command
+			Need a Dockerfile
+
+
+
+		Publish the docker image to docker hub(Docker registry)
+
+			first we shd have docker hub access token.
+		
+
+
+Task on Jenkins ::
+
+	CI/CD --> 
+		1. CI/CD -- Trigger should be automatic. using poll scm & github webhook.
+		2. Jenkins Job --> To clean the Workspace.(I should have only last 2 days Workspace details).
+		3. Clean up workspace as soon as the artifacts is deployed to target server.
+
+	pull and execute(Kubernetes)
+
+	Kubernetes ::::
+
+		Intro. to K8s 
+		Architecture of Kubernetes!
+
+Next Installation of Kubernetes :::
+Working with Pods
+Working with Deployments Controllers
