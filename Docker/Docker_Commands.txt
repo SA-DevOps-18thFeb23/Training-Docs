@@ -1,0 +1,284 @@
+#Docker Installation | Configuration | Commands & Concepts:
+
+sudo yum install docker
+
+yum install docker -y
+docker version
+systemctl status docker
+systemctl start docker
+systemctl status docker
+systemctl enable docker
+
+
+#Basic Docker Commands :
+
+#goto : https://hub.docker.com/
+
+#Test Docker with basic hello-world image from docker hub.
+
+docker run centos
+docker pull centos 
+
+
+
+docker run -it nginx
+docker exec -it <container_id>
+
+docker pull hello-world
+
+docker images
+
+docker run centos
+
+docker ps
+docker ps -a
+
+### Run Container in Interactive Mode:
+###docker run -it --name=testvol1 centos bash
+docker run -it centos bash
+
+cat /etc/*release*
+
+### Print the Docker Centos Image Release Info.
+dockerpath# cat /etc/*release*
+dockerpath# exit
+
+###Run Docker Container in DETACHED MODE :
+docker run -d centos sleep 20 
+docker ps -a
+
+###Run Docker Container in FOREGROUND MODE :
+docker run centos sleep 20
+docker ps -a
+
+docker run -d centos sleep 200
+docker stop <container_id>
+
+docker rm 2c5b 1b4f
+
+docker images
+docker rmi <image_id>
+
+### Before deleting image, ensure that it is not referenced to any container. 
+### In it is mapped, delete the container first, then can re container image.
+
+docker rmi -f hello-world
+
+docker pull centos:centos7.9.2009
+
+docker run centos sleep 1100
+
+docker stop <container_id>
+
+### Detached Mode
+docker run -d centos sleep 2000
+
+docker attach <running_container_id>
+docker stop <container_id>
+
+###docker pull timer
+
+#docker pull jenkins
+
+#docker run jenkins
+
+docker inspect <container_id>
+
+docker history <imagename>
+
+
+### Port-Mapping / Port-Binding
+
+goto hub.docker & search for tomcat
+
+docker run -it -p 8585:8080 jenkins
+docker run -it -p 8586:8080 tomcat:8.0
+
+
+
+
+
+
+
+docker run -it -p 8085:8080 tomcat:8.0
+
+#### -p host_port:container_port
+
+Once you install tomcat on ur vm :
+
+<public_ip>:8585
+<public_ip>:8586
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###Docker Logs
+
+docker logs <container_id>
+
+#Access Docker contents using exec - Non-Interactive Mode: 
+
+docker exec e8553a4721d5 cat /etc/hosts
+
+#Login to Docker Container using exec in Interactive Mode: (Using Container Name) 
+
+docker exec -it <container_name-gallant_blackburn> bash
+
+#Run Docker Image in Interactive Mode: (Using Image Name) 
+
+docker run -it centos bash
+dockerpath# cat /etc/*release*
+dockerpath# exit
+
+### Get the running Container Names
+docker ps -q
+
+###Stop all Running Containers:
+
+docker stop $(docker ps -q)
+
+docker kill $(docker ps -aq)
+
+
+
+
+###Build Docker Image :::
+
+Dockerfile 
+
+###Using commit: 
+
+	docker run -it debian
+
+	ls
+
+	git
+
+	apt-get update && apt-get install -y git 
+
+	clear
+
+	git 
+
+	docker ps -a 
+
+	docker commit <container_id> loksaieta/deb-git:v1.0
+	
+	docker commit b775bea4b00a loksaieta/dcpdebian-git:v1.0
+	
+
+	docker images
+
+	docker run -it loksaieta/mar13-git:v1.0
+	
+	###Login to Container:
+	docker exec -it <container_name-wizardly_shannon> bash
+	
+###Using Docker file:
+
+mkdir docker-contents
+cd docker-contents
+
+vi Dockerfile
+
+FROM debian
+RUN apt-get update
+RUN apt-get install -y git
+RUN apt-get install -y vim
+
+### Best Practice:
+
+FROM debian
+RUN apt-get update && apt-get install -y \
+	git \
+	vim
+
+###
+sudo usermod -aG docker devopsadmin
+###save this Dockerfile
+
+docker build -t loksaieta/mar13-git-vim .
+
+docker images
+
+#Dockerfile 
+
+
+FROM tomcat:8.0
+WORKDIR /home/devopsadmin
+COPY ./mvn-hello-world.war /usr/local/tomcat/webapps
+
+docker build -t loksaieta/javawebapp1 .
+docker build -t loksaieta/javamvnwebapp1 .
+
+
+docker run -it -p 8585:8080 loksaieta/mvnjavawebapp1
+
+docker run -it -p 8080:8080 loksaieta/javamvnwebapp1
+
+#QA Environment ---> OS, appln, appln server, mysql, Testing tool, Monitoring tools 
+
+#docker-compose.yaml 
+
+#While running multiple containers ----> we shd establish links between the containers... for data trans
+ 
+#### Docker Push images to Docker Registry:
+
+docker images
+
+docker tag <image_id> loksaieta/debian-git1:1.0
+
+docker tag 33e83a2fdb90 loksaieta/debian-git2:v1.0
+
+docker images 
+
+## Push to docker registry
+
+docker login --username=loksaieta
+
+password: dckr_pat_XZqWBY3EsxfwoZongVsDDjIIjNs
+
+#docker push loksaieta/deb-git-vim:latest
+
+docker push loksaieta/mvnjavawebapp1
+
+#docker push loksaieta/dcpdebian-git:v1.0
+
+##Docker File
+
+###Storage
+### Volumes:
+
+docker run centos sleep 30
+
+docker volume list
+
+docker volume create dcpvol1 
+
+docker volume inspect dcpvol1
+
+docker run -it --name=testvol1 --mount source=v1,destination=/v1 bash 
+
+docker run -it --mount source=dcpvol1,destination=/dcpvol1 centos bash
+
+stateless & Stateful Appln.
+
