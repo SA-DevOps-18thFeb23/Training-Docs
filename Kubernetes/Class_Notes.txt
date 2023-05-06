@@ -130,3 +130,157 @@ Assignments ::::
 	java - completed
 	jenkins - 7th 
 	mvn - - not opened. not yet started. ==> will be opened on 8th.	
+
+
+
+
+##############
+6th May. 2023
+##############
+
+
+	Kubernetes :::
+
+	Controller Ojects :::
+
+	Pods == defines the atomic unit of tasks.
+
+	Created Pod -- web appln.
+	
+	kubectl get pods == get the status of pod
+	
+	kubectl get pods -o wide == get the status of pod, pod_ip, working_node.
+
+	Service == NodePort Service ==>
+
+	Replicas of pod is destributed in more than one worker nodes.
+
+	Controllers :::
+
+	Replication Controller
+	Replicasets
+	Deployments
+	Daemonsets
+	Jobs
+
+	Deployment Controller :
+
+		It is used to :
+			Create Replicas of Pod Instances
+			Auto-Scale -- Scale up / down
+			Upgrade
+			Rollback / Update
+
+
+
+	Web-Application ;; E-Commerce Portal 
+
+
+	 prod -- kubernetes  
+			docker_Image-v1.0
+			docker_Image-v1.1
+			docker_Image-v1.2
+			docker_Image-v1.3
+
+	Deployment Strategy ::: Rolling-Update
+
+	3 copies of pod is running with v1.0
+
+	upgrade to v1.1
+
+
+	Continuous Integration and Deployment using Kubernetes :::
+
+
+	Jenkins ::
+		Master 
+		Slave(Build_Server)	build artifacts & docker image
+	
+	Kubernetes_Master
+	Kubernetes_WorkerNode1	
+	Kubernetes_WorkerNode2
+
+
+	CI/CD Pipeline :;
+	
+	Source Code Repository :::
+
+	SCM-Checkout	-> Build Artifacts	-> Build Docker Image	-> Publish to Dockerhub	-> Deploy to K8s
+
+	
+
+
+		Dockerfile --> Define the Image to be build
+
+	Infra - Servers & Tools ::
+
+
+	
+	Jenkins_Master 		--> jdk, git, pre-requisites of jenkins, jenkins 
+
+	Slave1(Build_Server)	--> jdk, git, maven, =>*.war || docker => to build docker image - 
+
+	Kubernetes_Master		devopsadmin (.ssh)	
+		Kubernetes_WorkerNode1	
+		Kubernetes_WorkerNode2
+	
+
+pipeline {
+    agent { label 'javabuildserver' }
+	
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "slave_maven"
+    }
+
+	environment {	
+		DOCKERHUB_CREDENTIALS=credentials('dockerloginid')
+	} 
+    
+    stages {
+        stage('SCM Checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+		}
+        stage('Maven Build') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+		}
+        stage("Docker build"){
+            steps {
+				sh 'docker version'
+				sh "docker build -t loksaieta/loksai-eta-app:${BUILD_NUMBER} ."
+				sh 'docker image list'
+				sh "docker tag loksaieta/loksai-eta-app:${BUILD_NUMBER} loksaieta/loksai-eta-app:latest"
+            }
+        }
+		stage('Login2DockerHub') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+        stage('Approve - push Image to dockerhub'){
+            steps{
+                
+                //----------------send an approval prompt-------------
+                script {
+                   env.APPROVED_DEPLOY = input message: 'User input required Choose "yes" | "Abort"'
+                       }
+                //-----------------end approval prompt------------
+            }
+        }
+		stage('Push2DockerHub') {
+
+			steps {
+				sh "docker push loksaieta/loksai-eta-app:latest"
+			}
+		}
+    }
+}
+
