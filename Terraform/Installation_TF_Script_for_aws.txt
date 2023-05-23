@@ -1,0 +1,206 @@
+##############
+20th May. 2023
+##############
+
+	IAC Tool ???
+
+	Infrastrcture as a code -
+		Infrastructure Team -- Responsible for server provisioning.	
+		
+	Early days:::	Shell Scripts / any Inhouse scripts to automate the Infra Provisioning
+		
+	IAC - Tools ::
+
+		Infra provisioning	--> Terraform, CFT, ARM
+	
+		Server Templating	--> Docker, Vagrant
+	
+		Configuration Mgmt.	--> Ansible, Chef, Puppet
+	
+	
+
+	Terraform 	--> HCL ---> Hashicrop Declarative Language.
+			--> Provision the Infra Structure
+
+	Ansible 	--> Configuration Mgmt
+
+	Terraform Architecture ::::
+
+
+							Terraform ::
+								1. Identify the scope of Servers(AWS/Az/GCP)
+								2. Create the Automation Script to provision the servers									3. Issue Terraform Init	
+									Create the provisioner in local machine
+								4. Terraform Plan
+									USed to valiate the requirement
+								5. Terraform Apply
+
+
+	To work on terraform ::
+		- Install Terraform
+			https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+		  Visual Studio Code
+		- Create the Terrraform Script.
+
+		
+	Server Provisioning using Terraform:::
+
+	- Script 
+	- Create AWS Resource - Access Token
+
+		Goto account - Security Credentials - In IAM Console - Choose Access Token - Create Access Token
+
+
+
+
+							Terraform ::
+								1. Identify the scope of Servers(AWS/Az/GCP)
+								2. Create the Automation Script to provision the servers									3. Issue Terraform Init	
+									Create the provisioner in local machine
+								4. Terraform Plan
+									USed to valiate the requirement
+								5. Terraform Apply
+
+
+	+ ===> Create
+	- ===> Deletion
+	~ ===> Update
+
+
+
+
+
+	CI/CD Pipeline ::::
+	
+	
+	scm checkout -> Build -> Create Artifact -> Deploy to QA_Server -> Automate Testing - Email
+
+
+
+build1:
+build2:
+
+scm checkout -> Build -> Create Artifact -> Provision QA_Server -> Deploy to QA_Server -> Automate Testing - Email
+
+
+
+
+
+
+
+
+
+
+
+
+provider "aws" {
+  region     = "ap-south-1"
+  access_key = "AKE"
+  secret_key = "u2AWEulaj3GmT"
+}
+
+# Create VPC
+
+resource "aws_vpc" "myvpc8" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "myvpc8"
+  }
+}
+
+# Create Subnet 
+
+resource "aws_subnet" "mysubnet8" {
+  vpc_id     = aws_vpc.myvpc8.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "mysubnet8"
+  }
+}
+
+# Internet Gateway
+
+resource "aws_internet_gateway" "mygw8" {
+  vpc_id = aws_vpc.myvpc8.id
+
+  tags = {
+    Name = "mygw8"
+  }
+}
+
+# Route Table
+
+resource "aws_route_table" "myrt8" {
+  vpc_id = aws_vpc.myvpc8.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.mygw8.id
+  }
+
+  tags = {
+    Name = "myrt8"
+  }
+}
+
+# Route Table Association
+
+resource "aws_route_table_association" "myrta8" {
+  subnet_id      = aws_subnet.mysubnet8.id
+  route_table_id = aws_route_table.myrt8.id
+}
+
+# Security Groups
+
+resource "aws_security_group" "mysg8" {
+  name        = "mysg8"
+  description = "Allow inbound traffic"
+  vpc_id      = aws_vpc.myvpc8.id
+
+  ingress {
+    description      = "HTTP"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description      = "SSH"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
+
+  tags = {
+    Name = "mysg8"
+  }
+}
+
+# Create Instance
+
+resource "aws_instance" "satfinstance2" {
+  ami           = "ami-025b4b7b37b743227"
+  instance_type = "t2.micro"
+  associate_public_ip_address = true
+  subnet_id = aws_subnet.mysubnet8.id
+  vpc_security_group_ids = [aws_security_group.mysg8.id]
+  key_name = "lov2"
+
+  tags = {
+    Name = "SA18-TF-Server2"
+  }
+}
+
