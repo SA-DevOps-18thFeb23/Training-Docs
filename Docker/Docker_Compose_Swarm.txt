@@ -1,0 +1,134 @@
+
+
+##############
+20th May. 2023
+##############
+
+	Docker Compose ===> It is plugin used to run multiple containers as a service.
+		
+	Micro-Service Based Architecture :::
+
+	E_commerce Portal::
+
+		3-Tier --> Front-end design (C1), Appln.Logic(C2), Backed(DBase)-(C3)  
+		
+
+
+	sign_Up --> developer1 --> Front-end design (C1), Appln.Logic(C2), Backed(DBase)-(C3) ==> service
+	sign_In
+	Search
+	Place Order
+	Payment
+	Track
+	
+
+	Process Involved in Docker Compose :::
+
+		1. Install Docker
+		2. Install Docker Compose Plugin
+		3. Create Docker Compose Config file using *.yaml
+
+
+
+
+https://docs.docker.com/compose/install/linux/
+
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+
+
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+
+[root@ip-172-31-34-177 proj1]# cat docker-compose.yaml
+version: '3'
+services:
+  webserv:
+    image: "tomcat:8.0"
+    ports:
+      - "8085:8080"
+  dbservos:
+    image: "redis:alpine"
+
+
+
+	Docker Swarm   ===> Container Orchestration Tool.
+
+
+		- Launch 3 Instance (for Demo) -- (1 + 2)
+
+
+		Master/Slave Acrchitecture
+
+
+		Swarm Leader/Manager Node
+			Swarm Worker Node1
+			Swarm Worker Node2
+
+		Enable access to all these machines.
+
+		Install Docker in all the machines and run it.
+
+		Initialize Swarm in one Node to make it as a Master Node.
+
+		Join other nodes as worker nodes to Swarm Manager Node.
+
+		Create Docker Services --> 
+
+
+    1  yum update -y
+    2  clear
+    3  sudo yum install docker -y
+    4  clear
+    5  systemctl start docker
+    6  systemctl enable docker
+    7  clear
+    8  docker swarm init --advertise-addr 172.31.42.30
+    9  docker node ls
+   10  docker swarm join-token manager
+   11  history
+   12  clear
+   13  docker service ls
+   14  docker service create --replicas 2 --name sa18service alpine ping docker.com
+   15  docker service ls
+   16  docker service innspect --pretty sa18service
+   17  docker service inspect --pretty sa18service
+   18  docker service inspect sa18service
+   19  clear
+   20  docker service ls
+   21  docker service ps sa18service
+   22  docker ps
+   23  docker ps -a
+   24  clear
+   25  docker service ls
+   26  docker service scale sa18service=6
+   27  docker service ls
+   28  docker service ps sa18service
+   29  docker service rm sa18service
+   30  docker service ps sa18service
+   31  clear
+   32  docker service create --name my-webapp --publish published=8098,target=80 --replicas 3 nginx
+   33  docker service ls
+   34  docker service ps my-webapp
+   35  history
+
+
+
+on workernode:
+docker swarm join --token SWMTKN-1-16z7kngrvrt2827h2nvabve716zdr2f9telvs5ayquude1u0ib-5is5470zubqu0xid10kyz16za 172.31.42.30:2377
+
+
+
+	Continuous Monitoring using Prometheus and Grafana ::::
+
+	Monitoring ::
+
+		Infra-Structure 
+
+			DEV, test, prod,.....
+		Prometheus and Grafana :::
+		Application Monitoring
+
+	Install and Config Prometheus & Grafana.
+
+
