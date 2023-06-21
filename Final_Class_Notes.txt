@@ -1,0 +1,644 @@
+18th Feb :::
+
+
+	DevOps Services :::
+	
+		Managed Services ::::
+		
+			Az  --> Az DevOps Services
+						Az Boards	
+							Used for end-end project management.
+							ALM Tool --> Applications Lifecycle Management Tool
+								User Stories :::
+									
+							
+						Az Repo 		--> Source Code changes.
+						Az Pipeline		--> Used to create CI/CD - Build and Release Pipelines.
+											Written using Yaml Scripts
+						Az Test			-->	This for test automation. - Junit/TestNG/Selenium
+						Az Artifacts	--> This is to manage the artifacts
+											Create snapshot versions of artifacts
+												1. Triggered t build --> s1.war --> Copied to Az Aritfacts.	
+															s1.war_SNAPSHOT_V1.1
+															s1.war_SNAPSHOT_V1.2
+															s1.war_SNAPSHOT_V1.3
+														
+												
+			AWS	--> 
+						CodeBuild
+						CodeCommit
+						CodePipeline
+						CodeTest
+						CodeArtifact
+						CodeDeploy
+						
+
+			Open-Source DevOps Tools ???
+			During Assessment.
+			
+			
+	SQL :::
+	
+		Database Management System 
+		
+		RDBMS - Relational database Management System ::
+		
+		Data 		???		===>	Collection of Information ?
+										Information Gathered>???
+										Set of Records 
+										userid,password
+										
+									Meaningless raw content/text 
+										
+									When we process the data it become information.
+										
+		Information ???		===>	Processed Data.
+		
+		data				-->		INDIA ===> 
+		Information			-->		INDIA is a Country 
+		
+		Manage the data! 	--> 	Data Management System 
+										Variable
+										Arrays
+										List
+										Files
+										Tables
+										Database 
+										Collections 
+									
+		Relational DataBase Management System 
+										Tables
+											Rows and Columns
+										Database 
+										Collections 			
+
+		Table1:
+
+		S.No.	Country
+		1		INDIA
+		2		PAKI
+		
+		Contraints ==> Conditions  ==> rules 
+		Ensure high integrity of database.
+		
+		Table2:
+
+		S.No.	Name	Course	Contact#	Addr
+		1		xyz		devops	1231231212  adfafdasdf
+		2		aws		devops  1212312312  asdfafasdfsdf
+		
+
+		How to create the Table ??
+		How to insert/update/delete Records ?
+		How to select the records ???
+		
+		DataBase 	==> collection of tables
+		Table		==> collection of rows and columns		
+		
+		Structured Query Language - SQL.
+			DDL	
+			DML
+			DCL
+			TCL
+		
+		Contraints ==> Conditions  ==> rules 
+		Ensure high integrity of database.			
+
+Customer_Id 	Customer Name 	Customer Contact No 	Customer City
+10001 			Sam 			99494999999 			Berlin
+10020 			Adam 			99994894849 			Prague
+				Adam 			99994234849 			Prague
+				
+Employee_DataBase :::
+
+	Employee_Personal
+
+	Employee_Project
+
+	Employee_Payscale
+	
+		Employee_Personal
+			Emp_ID		Name			Contact_#		Addr.	Email_ID
+			1001		xyz				1234123			asdfsa	adfasdf@xyz.com
+			1002		xyz				1232323			asdfsa	adas4df@xyz.com
+			1003		xyz				122323			asdfsa	adwasdf@xyz.com
+			1004		xyz				12341353423		asdfsa	adasasdf@xyz.com
+
+		Employee_Project
+			Emp_ID		Project_ID		Proj_Name		Role	Project_Manager	
+			1001		P1050			xyz				xyz		mgr
+			2002		P1050			xyz				xyz		mgr
+			2004		P1050			xyz				xyz		mgr
+
+
+			
+		Employee_Payscale
+			Emp_ID		Basic_pay		Account#		Bank
+			1001		> 50000			0				0
+			
+			
+		SQLLite ==> 
+			CLI
+			GUI 
+			
+		SQLLite3 ==> GUI & CLI
+		
+		
+		Structured Query Language - SQL.
+			DDL			-- Data Definition Language
+				Create,Alter,Drop,truncate
+			DML
+				insert/update/delete/select 
+			DCL
+			TCL
+			
+			
+
+Select Query :::
+
+	It is to select the required records from table.
+	
+		select * from table_name;
+		
+		select sno,sname from table_name1 where dept = "IT";
+		
+		select * from prod_table_name1 where product = "dell laptop";
+		
+		select * from prod_table_name1 where product = "laptop" and product = "Phone";
+		
+		select * from prod_table_name1 where product LIKE "DELL*;
+		
+		sno sname 
+		
+		1	asdf 
+		3	bsf 
+		
+
+	table_name1
+	
+	sno		sname	dept	sal
+	1		asdf	IT 		12312
+	2		qwe		CS		12312
+	3		bsf		IT 		223423
+	4		qwe		CS		231231
+	5		qwe		CS		123123
+	
+	update table_name1 set sal = 50000 where sno = 1;
+	
+	Data Base Joins :::
+			- Used to Combine more than a row from multiple tables based on common field.
+			
+		INNER Joins
+		Left outer Join 
+		Right Outer Join 
+
+
+select 
+
+		Employee_Personal
+			Emp_ID		Name			Contact_#		Addr.	Email_ID			Experience
+			1001		xyz				1234123			asdfsa	adfasdf@xyz.com			15
+			1002		xyz				1232323			asdfsa	adas4df@xyz.com			15
+			1003		xyz				122323			asdfsa	adwasdf@xyz.com			20
+			1004		xyz				12341353423		asdfsa	adasasdf@xyz.com		10		
+
+		Employee_Project
+			Emp_ID		Project_ID		Proj_Name		Role	Project_Manager	
+			1001		P1050			xyz				xyz		mgr
+			2002		P1050			xyz				xyz		mgr
+			2004		P1050			xyz				xyz		mgr
+
+
+select Employee_Personal.Emp_ID, Employee_Personal.Name, Employee_Project.Project_ID, Employee_Project.Proj_Name from Employee_Personal Join Employee_Project orders on Employee_Personal.Emp_ID = Employee_Project.Emp_ID
+
+
+Emp_ID		Name Project_ID		Proj_Name	
+1001		xyz	 P1050			xyz			
+		
+ select MIN(Experience) from Employee_Personal;
+ 
+	10
+ 
+Sub Queries :::
+
+
+ select Emp_ID, Name from Employee_Personal Where Experience = (select MAX(Experience) from Employee_Personal);
+ 
+ https://github.com/devopsni3/addressbook-demo
+ 
+ Description	Resource	Path	Location	Type
+Cannot access defaults field of Properties	pom.xml	/addressbook	line 1	Maven Configuration Problem
+
+
+###################
+# 4th June. 2023. #
+###################
+
+	Python Programming!!!
+	
+	
+	Using Python, we can develop :
+	
+		Desktop Application 	*.py
+		Web application
+			Web Application Framework.
+				Django
+				Flask
+		
+			Based on Templates ::
+					HTML
+					CSS 
+					
+	
+	Pre-Requisites ::::
+	
+		Install Python3
+			https://www.python.org/downloads/
+			
+			IDLE		CLI 
+		
+		IDE to work on Python
+			Pycharm 
+			VSCode ==> Python Extension for VSCode 
+			
+		Install Web Application Framework 
+			pip install flask 
+			
+ 
+	Eclipse - Enterprise Edition for Java 
+	Eclipse - for Java Developer
+ 
+	variable ::
+	
+		int a = 5;
+		
+		stud={a,s,s,s,s,s}
+		
+		index ===> 
+ 
+ 
+		x = 5
+		
+		x = input("enter value for x: ")
+		
+		
+		system.out.println("Enter the value: ")
+		readline()
+		
+		
+	web_app Folder
+	
+		app.py 
+		templates 
+			html
+			css 
+		
+		
+		python -m flask run
+
+
+Create a folder in VSCode :::
+
+app.py		
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+
+def hello():
+	return render_template("hello.html")
+
+if "__name__" == "__main__":
+	app.run(debug=True)
+	
+
+hello.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>www.loksaieta.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="jumbotron" style="background-color:white">
+      <img src="https://octodex.github.com/images/spidertocat.png" alt="Spidertocat"
+           class="img-responsive center-block" style="width:250px"/>
+      <h2 class="text-center">Hello Everyone</h2>
+      <p class="text-center">SA Batch 18 - Python Web_Application Demo...</p>
+  </div>
+</body>
+</html>		
+		
+ 
+open terminal :::
+
+pip install flask 
+ 
+python -m flask run
+ 
+ 
+ 
+ 
+Continuous Testing :::
+
+	Envi.
+	
+		Dev
+		Test 
+			QA 
+			UAT 		===>			PROD 
+			
+	jenkins Pipeline ::
+	
+	SCM Checkout ==> Build	==> Deploy to QA 	==> 	Automated QA Testing 		==> Deploy to UAT ==>    Automated UAT Testing ==> Deploy to PROD
+													(test data, case, scenarios)						 (test data, case, scenarios)
+
+
+	Pipeline for automated Testing ::::
+
+	
+	SCM Checkout	===> 	Automated QA Testing 	
+ 
+ 
+	SCM Checkout	===> 	Automated UAT Testing 
+ 
+ 
+ 
+Assignments ???
+
+	docker,kubernetes,ansible,terraform,monitoring(Prometheus&Grafana),selenium,
+ 
+ Ansible ????d8f6e462cfa343e794cbc741ec2405eb
+ 
+###################
+# 10th June. 2023 #
+###################
+
+		Demo on Selenium ::::
+		
+		Pre-requisites ::::
+		
+		Java Project ::::
+		
+			-	simple Java Project
+			
+			-	Maven --> pom.xml - define all dependencies
+					Maven Repo. 
+					
+			-	Application framework --> spring boot.		
+			
+			Flask -> web application framework 
+			
+		Continuous Testing -->
+		
+			Selenium
+			TestNG 
+			Junit 
+			
+		
+		1. Eclipse IDE 
+		2. Create Maven Application
+		3. pom.xml file ==> define all selenium related dependencies.
+		4. stNG. from Eclipse == > Marketplace - serInstall Teach for TestNG.
+		5. Web Driver --> 
+				Chrome --> chrome webdriver of same version.
+		6. XPath ==> identify the location of the field in webpage.
+		
+		Web Application :::
+		
+			github.com	
+			Jenkins_Master
+			
+			
+		web application ;;? 
+			
+			text box 
+			button 
+			
+		
+			
+	Project Phase :::
+		
+		1. Banking & Finance
+		2. Health Care
+		3. Insurance
+	
+	
+	Developers' Perspective 
+	
+		- Appln. Architecture
+		- Tools 
+		- Infra
+		- Requirements
+		- front-end & back-end requirements
+		- Design Docs.
+		- Lang 
+		- Database 
+		- Info. gathering
+		- Design algo
+		- dependencies
+			
+	Domain Knowledge!!! 
+	Banking, Retail, INS, Healthcare, 
+	
+		create a microservice for my banking online card payment
+
+	DevOps Perspective
+			
+###################
+# 11th June. 2023 #
+###################			
+ 
+		docker swarm / kubernetes --> Container Orchestration.
+ 
+		3 - Projects :::
+		
+	Developers' Perspective
+	
+	In your local Machine :::
+		1. Download the given project to local Machine.
+		2. Open the project in Eclipse.
+		3. Understand the pom file definition and the given dependencies.
+		4. Start Tomcat Server in Eclipse 
+		5. Run the application.
+				Perform maven build and check the artifacts.
+				JUnit/TestNG - Run as Java Application. (Selenium Testing)
+		6. Tomcat server --> localhost:8087
+		
+		
+	Create Empty Repo. in GITHub call MyBankingApp.
+	In local Machine :
+		Open Git Bash / Eclipse terminal 
+			Goto the project location 
+				git init 
+				git remote add origin <url - MyBankingApp>
+				
+	
+	DevOps Perspective	 :::		
+	
+		Jenkins 			--> Master & Slave Architecture.
+								Declarative Pipeline 
+					
+		githubWebhook		-->	to auto trigger the build, whenever the new changes happened in src repo.
+		
+		Email Notification 	--> 
+			At every SCM-Checkout, build - stage as a post build action, if the step failed, we shd send notifcation.
+			At every Docker publish, Deploy to target server stage as a post build action, we shd send notifcation when sucessful/unseccessful.
+			
+			
+		CICD Pipeline :::
+		
+			scm-checkout 
+			application build 
+				Automated Testing --> Junit/TesNG 
+			docker build image 
+			publish to docker hub 
+			deploy to kubernetes Cluster 
+					define pod and exec the pod.
+		
+		selenium Testing 	==> 
+		ansible 			==>
+
+
+	Non-Prod Environment 						Prod Environment
+	
+		Local Dev Machines 
+		QA
+		UAT 					---> 			Prod Server 
+		
+		
+		
+	Jenkins_Master - to create the cicd pipeline 
+
+		Jenkins_Slave - Build application artifacts 
+						Install Docker and Create Docker Image
+						Publish to Docker-Hub.
+					
+	Kubernetes to Deploy:	Create Namespace - QA/UAT/PROD 
+		Cluster :
+			WN1
+			WN2
+			WN3 
+		
+		<external_IP:<nodeport>>
+				<external_IP:31000>		==> QA 
+				<external_IP:31001>		==> UAT 
+				<external_IP:31002>		==> PROD
+				
+	Selenium Test Cases ==: 
+		
+		Infra-Pipeline :::
+	
+			Provision Servers	- Terraform 		
+			Config servers 		- Ansible 
+			
+		CICD Pipeline 1 :::
+		
+			SCM-Checkout 
+			Application build 
+				Automated Testing --> Junit/TesNG 
+			Docker build image 
+			Publish to docker hub 
+			Deploy to kubernetes Cluster(QA-Namespace)
+				Test the application 
+			Deploy to kubernetes Cluster(UAT-Namespace)
+				Test the application 					
+			Deploy to kubernetes Cluster(PROD-Namespace)
+				Test the application 			
+		
+		CICD Pipeline 2 :::		
+
+			Infra-Pipeline :::
+	
+			Provision Servers	- Terraform 		
+			Config servers 		- Ansible 
+		
+			Jenkin_Slave1
+				SCM-Checkout 
+				Application build (Jenkins_Slave)
+					Automated Testing --> Junit/TesNG 
+					
+			Copy the artifacts from jenkins_Slave Machine to Docker Build Server using Ansible 
+			Create Docker Image 
+			Run docker Container with port mapping
+			Publish to dockerhub
+
+			Deploy to kubernetes Cluster(QA-Namespace)
+				Test the application 
+			Deploy to kubernetes Cluster(UAT-Namespace)
+				Test the application 					
+			Deploy to kubernetes Cluster(PROD-Namespace)
+				Test the application 		
+		
+			Kubernetes Service - NodePort Service 
+			
+			
+
+	Project Workflow :::::
+
+
+		Non-prod :
+		
+			Dev Machine 
+			 IDE - Create the src Code 
+			 Create build and run for unit testing 
+			 Selenium Testing and generate the test report.
+			 Push the chages to src Repo. 
+			 
+		Using github webhook, trigger the cicd pipeline for this proj.
+			
+			 CICD - Pipeline workflow :
+			 
+			 SCM-Checkout 
+			 Build and Create Artifacts 
+			 Using Ansible, Deploy the artifacts, and create docker image, and run the container and publish to docker hub.
+			 
+			 Deploy to kubernetes cluster.
+			 
+			 
+	Next :::
+			
+			Infra Perspective :::
+			
+				Ansible Controller 
+				
+				Jenkins_Master with slavenode1
+					
+				Kubernetes_Master with 3 workerNodes
+			
+			Monitoring Server  - Install Prometheus & Grafana 
+				Target - KWN1,KWN2,KWN3 
+				
+		
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		
+			
+			
+			
+			
+			
+			
+			
+			
+		
+github webhook:::
+		we can trigger the build for every commit.
+
+poll scm :::		
+		Test Cycle :::
+		9am -	12 pm --> Job will be trigger to perform automated testing - Test Job 
+				3 pm  --> Job will be trigger to perform automated testing
+	
